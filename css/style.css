@@ -1108,9 +1108,24 @@ nav .login-contact a{
 
 /* End Navbar */
 
+/* Start Regestration Donor Body */
+
 .regestration-donor{
     padding: 48px 0;
 }
+
+.regestration-donor .row .col{
+    padding-bottom: 300px;
+}
+
+
+@media (min-width:768px) and (max-width:991px) {
+    .regestration-donor .row .col{
+    width: 70%;
+    }
+}
+
+
 
 .regestration-donor h1{
     font-size: 36px !important;
@@ -1123,6 +1138,17 @@ nav .login-contact a{
     color: #4B5563;
 }
 
+@media (max-width:991px) {
+    .regestration-donor h1{
+        font-size: 25px !important;
+    }
+
+    .regestration-donor p{
+        font-size: 15px !important;
+    }
+}
+
+
 .regestration-donor form label{
     font-size: 14pc;
 }
@@ -1131,8 +1157,91 @@ nav .login-contact a{
     color: #D90429;
 }
 
-.regestration-donor form input{
+.regestration-donor form input ,.regestration-donor form select ,.regestration-donor form textarea{
     background-color: #FEE2E2 !important;
+    border-radius: 10px;
 }
 
+.regestration-donor form input.cc{
+    background-color: #D90429 !important;
+    border-radius:0 !important; 
+    border-width:1px !important ; 
+    border-color: blue !important;
+    margin-top: 10px;
+    
+}
+
+.regestration-donor form .form-check{
+    padding-left: 50px;
+}
+
+.regestration-donor form textarea{
+    resize: none;
+    height: 98px;
+}
+
+.regestration-donor form select{
+    background-position: 10px;
+}
+
+.regestration-donor form input[type="submit"]{
+    border-radius: 50px !important;
+    background-color: #D90429 !important;
+}
+
+/*End Regestration Donor Body */
+
 /******************************* End Regestration Donor Page *******************************/
+
+/******************************* End Regestration Organization Page *******************************/
+
+/* Start Regestration Organization Body */
+
+.regestration-organization {
+    background-color: #F9FAFB;
+    margin-bottom: 0;
+}
+
+.regestration-donor .row .col{
+    background-color: #FFFFFF;
+    margin-bottom: 42px !important;
+}
+
+.regestration-donor .row .col form input ,.regestration-organization form select ,.regestration-organization form textarea{
+    background-color: #FFFFFF !important;
+}
+
+.regestration-organization h1.one{
+    font-size: 48px !important;
+    font-weight: bold !important;
+    color: #343A40 !important;
+}
+
+.regestration-organization p.one{
+    font-size: 18px !important;
+    color: #6C757D;
+}
+
+@media (max-width:991px) {
+    .regestration-organization h1.one{
+        font-size: 25px !important;
+    }
+
+    .regestration-organization p.one{
+        font-size: 15px !important;
+    }
+}
+
+
+.regestration-organization .border{
+    border: dotted !important ;
+    border-color:#E4E4E4 !important; 
+}
+
+.regestration-organization input[type="submit"]{
+    background-color: #D92425 !important;
+}
+
+/* End Regestration Organization Body */
+
+/******************************* End Regestration Organization Page *******************************/
