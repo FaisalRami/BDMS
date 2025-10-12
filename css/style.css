@@ -1,0 +1,1138 @@
+/* Start Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: "Cairo", sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* End Global */
+
+/******************************* Start Landing Page *******************************/
+
+/* Start Navbar */
+
+.navbar .navbar-nav{
+    /* padding-left: 20px; */
+}
+
+nav img{
+    width: 200px;
+    height: 33px;
+}
+
+nav ul li:not(:last-child){
+    margin-right: 32px !important;
+}
+nav ul li a ,nav .login .m-2{
+    color: #4B5563 !important;
+    font-size: 16px;
+}
+
+nav .login .m-2{
+    display: inline-block;
+    margin-left: 15px !important;
+}
+
+nav span{
+    font-size: 27px;
+}
+
+nav .account{
+    background-color: #D32F2F !important;
+    border-radius: 11px;
+    width: 100px !important;
+    padding: 5px 9px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF !important;
+}
+
+nav{
+    height: 72px;
+}
+
+@media (max-width:991px) {
+    nav ul li{
+        text-align: center;
+    }
+
+    nav .login{
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* End Navbar */
+
+/* Start welcome */
+
+.welcome{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 586px;
+    padding-top: 194px;
+}
+
+.welcome h1{
+    font-size: 72px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.welcome p{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 33px;
+}
+
+.welcome .buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.welcome .buttons a{
+    width:148px;
+    height: 48px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.welcome .buttons :nth-child(1){
+    margin-left:16px;
+}
+
+@media (max-width:767px) {
+    .welcome h1{
+        font-size: 40px;
+    }
+
+    .welcome p{
+        font-size: 15px;
+    }
+}
+
+/* End welcome */
+
+/* Start Why Donate */
+
+.whyDonate{
+    padding-top: 80px;
+}
+.whyDonate .header h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #000068 !important;
+}
+
+@media (max-width:767px) {
+    .whyDonate .header h1{
+        font-size: 30px;
+    }
+}
+
+.whyDonate .header p{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #424242;
+}
+
+.whyDonate .body{
+    padding-top: 32px;
+    text-align: center;
+}
+
+.whyDonate .body img{
+    width: 64px;
+    height: 64px;
+
+}
+
+.whyDonate .body .row{
+    display: flex;
+    gap: 48px;
+}
+
+@media (max-width:991px) {
+    .whyDonate .body .row{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+.whyDonate .body .col{
+    background-color: #00637C;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+
+.whyDonate .body .col h3{
+    margin-top: 23px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.whyDonate .body .col p{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+
+/* End Why Donate */
+
+/* Srart How It Work */
+
+.howWork{
+    padding-top: 160px;
+}
+
+.howWork .header .buttons ul li:nth-child(1) button{
+    margin-left: -37px;
+}
+
+.howWork .header .buttons  ul li .active{
+    width: 240px;
+    color: #FFFFFF;
+    background-color: #D32F2F;
+}
+
+@media (max-width:991px) {
+    .howWork .header .buttons ul li:nth-child(2) button{
+        width: 200px;
+    }
+}
+
+.howWork .header .buttons ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.howWork .header .buttons ul li button{
+    border-radius: 25px;
+    height: 52px;
+    padding: 12px;
+    font-weight: bold;
+    width: 143px;
+    background-color: #E5E7EB;
+    color: #4B5563;
+}
+
+.howWork .header h1{
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000068;
+}
+
+@media (max-width:767px) {
+    .howWork .header h1{
+        font-size: 30px;
+    }
+}
+
+.howWork .body img{
+    width: 96px;
+    height: 96px;
+    margin-bottom: 16px;
+}
+
+.howWork .body h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000068 !important;
+    margin-bottom: 8px;
+}
+
+.howWork .body p{
+    font-size: 16px;
+    color: #424242;
+}
+
+.howWork .body .row{
+    display: flex;
+    gap: 48px;
+}
+
+@media (max-width:991px) {
+    .howWork .body .row{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+.howWork .body{
+    padding-top: 32px;
+    text-align: center;
+}
+
+.howWork .body .col{
+    padding: 0 32px 32px 32px;
+}
+
+/* End How It Work */
+
+/* Start Success */
+
+.success .body .col{
+    background-color: #00637C;
+    padding: 32px;
+}
+
+.success .body h3{
+    color: #FFFFFF !important;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.success .body p{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+/* End Success */
+
+/* Start Test */
+
+.test{
+    padding-top: 160px;
+}
+
+.test .body .col p{
+    font-style: italic;
+}
+
+.test .body .col h1{
+    font-size: 16px;
+    color: #000068;
+}
+
+.test .body .col .two{
+    font-size: 14px;
+}
+
+/* End Test */
+
+/* Start Partners */
+
+.partners{
+    padding-top: 50px;
+    margin-bottom: 80px;
+}
+
+.partners .header h1{
+    margin-bottom: 48px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000068;
+}
+
+@media (max-width:767px) {
+    .partners .header h1{
+        font-size: 30px;
+    }
+}
+
+
+.partners img{
+    width: 48px;
+    height: 48px;
+}
+
+
+/* End Partners */
+
+/* Start Copt */
+
+.copy{
+    background-color: #00637C;
+    padding: 32px 0;
+    height: 84px;
+}
+
+.copy p{
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/* End Copt */
+
+/******************************* End Landing Page *******************************/
+
+/******************************* Start About Us page *******************************/
+
+/* Start Blood Bridge */
+
+.bloodBridge {
+    padding-top: 83px;
+}
+
+.bloodBridge h1{
+    font-size: 48px;
+    font-weight: bold;
+    color: #D32F2F;
+}
+
+
+@media (max-width:991px) {
+    .bloodBridge h1{
+        font-size: 30px;
+    }
+}
+
+.bloodBridge p{
+    font-size: 18px;
+    color: #333333;
+}
+
+@media (max-width:991px) {
+    .bloodBridge p{
+        font-size: 15px;
+    }
+}
+
+/* End Blood Bridge */
+
+/* Start Mission & Values */
+
+.missionValues{
+    padding-top: 64px;
+}
+
+.missionValues img{
+    width: 488px;
+    height: 496px;
+}
+
+.missionValues .mission h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #D32F2F;
+}
+
+.missionValues .mission p{
+    width: 488px;
+    font-size: 16px;
+    color: #333333;
+}
+
+@media (max-width:767px) {
+    .missionValues img{
+        width: 100%;
+    }
+}
+
+@media (max-width:991px) {
+    .missionValues .mission{
+        text-align: center;
+        
+    }
+    .missionValues .mission p{
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+.missionValues .values span{
+    width: 32px;
+    height: 32px;
+    padding: 1px;
+}
+
+@media (min-width:991px) and (max-width:1199px) {
+    .missionValues .values{
+        padding-right: 50px;
+    }
+}
+
+.missionValues .values .circ{
+    border-radius: 50% !important;
+}
+
+.missionValues .values .one{
+    font-size: 30px;
+    font-weight: bold;
+    color: #D32F2F;
+    margin-bottom: 32px;
+}
+
+@media (max-width:991px) {
+    .missionValues .values .one{
+        text-align: center;
+    }
+}
+
+.missionValues .values .two , .missionValues .values p{
+    font-size: 16px;
+    color: #333333;
+}
+
+.missionValues .values .two{
+    font-weight: bold;
+}
+
+.missionValues .values .row:not(:last-child){
+    margin-bottom: 32px;
+}
+
+/* End Mission & Values */
+
+/* Start Our team */
+
+.header {
+    padding-top: 64px !important;
+}
+
+.header h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 16px !important;
+}
+
+.team{
+    margin-bottom: 32px;
+}
+
+.team .test{
+    padding-top: 0;
+}
+
+.team .test .body img{
+    width: 160px;
+    height: 160px;
+}
+
+.team .test .body .p-one{
+    font-size: 14px;
+    color: #D32F2F;
+    font-style: normal;
+}
+
+.team .test .body .p-tow{
+    color: #333333;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.team .test .body h1{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* End Our team */
+
+/* Start Out Impact */
+
+.impact .bg1{
+    background-color: #F5F5F5;
+    padding: 48px;
+}
+
+.impact .header{
+    padding-top: 0 !important;
+}
+
+.impact .success{
+    padding-top: 0;
+}
+
+.impact .success .col{
+    background-color: #FFFFFF;
+    padding: 24px;
+}
+
+.impact .success .col h3{
+    font-size: 48px;
+    font-weight: bold;
+    color: #D32F2F !important;
+}
+
+@media (max-width:991px) {
+    .impact .success .col h3{
+        font-size: 30px;
+    }
+}
+
+.impact .success .col p{
+    font-size: 16px;
+    color: #333333;
+}
+
+/* End Out Impact */
+
+/* Start Get IN Touch */
+
+.touch{
+    margin-bottom: 45px;
+}
+
+.touch span{
+    margin: 0 16px;
+}
+
+/* End Get IN Touch */
+
+/* Start Copy */
+
+.copy-about{
+    height: 116px;
+}
+
+.copy-about .p-one{
+    font-size: 16px;
+    color: #EDF2F4;
+}
+
+/* End Copy */
+
+/******************************* End About Us page *******************************/
+
+
+/******************************* Start Contact Us page *******************************/
+
+/* Start Navbar */
+
+nav .login-contact a{
+    width: 119px !important;
+    border-radius: 50px;
+}
+
+/* End Navbar */
+
+/* Start Get In Touch */
+
+.touch-conact{
+    margin-bottom: 64px;
+}
+
+.touch-conact .header{
+    padding-top: 96px !important;
+}
+
+/* End Get In Touch */
+
+/* Start BOdy Contact */
+
+.body-contact .mission , .body-contact .values .information ,.body-contact .values .questions{
+    padding: 33px;
+    border: 2px solid #F0F3F7;
+    border-radius: 5px;
+}
+
+.body-contact {
+    padding-top: 0;
+    margin-bottom: 96px;
+}
+
+.body-contact .mission textarea{
+    resize: none;
+}
+
+.body-contact .values .information span{
+    padding: 0px;
+    width: 48px;
+    height: 48px;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+.body-contact .values .information .one , .body-contact .values .questions .one{
+    font-size: 24px;
+}
+
+.body-contact .values .information .tow{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2D3748;
+}
+
+.body-contact .values .information a{
+    font-size: 16px;
+}
+
+.body-contact .values .information p{
+    font-size: 14px;
+    color: #2D3748;
+}
+
+.body-contact .mission h1{
+    font-size: 24px;
+}
+
+.body-contact .mission label{
+    font-size: 14px;
+    color: #2D3748;
+}
+
+.body-contact .mission input{
+    font-size: 14px;
+    padding-right: 17px;
+}
+
+.body-contact .mission .btn{
+    height: 48px;
+    font-weight: bold;
+}
+
+.body-contact .values .questions button{
+    text-align: right !important;
+    background-color: #F7FAFC;
+    color: #2D3748;
+    height: 56px;
+    position: relative;
+}
+
+.body-contact .values .questions .circ{
+    position: absolute;
+    left: 15px;
+    top: 17px;
+}
+
+@media (max-width:991px){
+    .body-contact .mission{
+        margin-bottom: 20px !important;
+    }
+
+    .body-contact .values{
+        padding: 0;
+    }
+}
+
+
+
+
+/* End Body Contact */
+
+/******************************* End Contact Us page *******************************/
+
+
+/******************************* Start Login page *******************************/
+
+/* Start Navbar */
+
+.nav-login .login a{
+    border-radius: 15px;
+}
+
+.nav-login{
+    margin-bottom: 58px;
+
+}
+
+/* End Navbar */
+
+/* Start Login Body */
+
+.login-body{
+    margin-bottom: 57px;
+}
+
+.login-body .row .col-9{
+    padding: 40px;
+    border: 2px solid #FDFDFD;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 0px #FDFDFD;
+}
+
+.login-body .row .col-9 h1{
+    margin-bottom: 32px;
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+}
+
+.login-body .row .col-9 form{
+    margin-bottom: 25px;
+}
+
+.login-body .row .col-9 form input {
+    border: 1px solid #FEE2E2;
+    border-radius: 10px;
+}
+
+.login-body .row .col-9 form input[type="submit"]{
+    height: 46px;
+    font-weight: bold;
+}
+
+.login-body .row .col-9 form label{
+    font-size: 14px;
+    color: #374151;
+}
+
+.login-body .row .col-9 form a{
+    font-size: 14px;
+    color: #DF2020;
+}
+
+.login-body .row .col-9 span{
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+.login-body .row .col-9 .one{
+    margin-bottom: 32px;
+}
+
+.login-body .row .col-9 .one img{
+    width: 20px;
+    height: 20px;
+}
+
+.login-body .row .col-9 .one , .login-body .row .col-9 .two , .login-body .row .col-9 span{
+    font-size: 14px;
+}
+
+.login-body .row .col-9 .two a{
+    color: #DF2020;
+}
+
+/* End Login Body */
+
+/******************************* End Login page *******************************/
+
+/******************************* Start Forget Password page *******************************/
+
+/* Start Forget Password Body */
+
+.forget-password-body .heart-box{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FEE2E2;
+    line-height: 80px;
+}
+
+.forget-password-body .heart-box img{
+    width: 48px;
+    height: 48px;
+}
+
+.forget-password-body .row .col-11 h1{
+    font-size: 30px;
+    color: #DC2626;
+    margin-bottom: 8px;
+}
+
+.forget-password-body .row .col-11 .worry{
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 32px;
+}
+
+.forget-password-body .row .col-11{
+    border: 0px solid #FDFDFD;
+    border-radius: 0;
+    box-shadow: 0 0 10px 0px transparent;
+}
+
+.forget-password-body .row .col-11 form{
+    padding: 33px;
+    border: 2px solid #FDFDFD;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px #FDFDFD;
+}
+
+.forget-password-body .row .col-11 form label{
+    font-size: 14px;
+    color: #374151;
+}
+
+.forget-password-body .row .col-11 form input{
+    border: 1px solid #FEE2E2;
+    border-radius: 10px;
+}
+
+.forget-password-body .row .col-11 form input[type="submit"]{
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+}
+
+.forget-password-body .row .col-11 form span a[href="login.html"]{
+    font-size: 14px;
+    color: #3B82F6;
+    font-weight: normal;
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+    .forget-password-body .row .col-11{
+        width: 55% !important;
+    }
+}
+
+
+/* End Forget Password Body */
+
+/******************************* End Forget Password Page *******************************/
+
+/******************************* Start New Password Page *******************************/
+
+/* Start Navbar */
+
+.nav-new-password{
+    margin-bottom: 26px;
+}
+
+/* End Navbar */
+
+/* Start New Password Body */
+
+.new-password-body{
+    margin-bottom: 26px;
+}
+
+.new-password-body .row .col-11{
+    padding: 40px;
+    border: 2px solid #FDFDFD;
+    border-radius: 30px;
+    box-shadow: 0 10px 5px 0px #FDFDFD;
+}
+
+.new-password-body .row .col-11 form{
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: 0 0 10px 0px transparent;
+}
+
+.new-password-body .row .col-11 form input{
+    border: 1px solid #FEE2E2;
+    border-radius: 10px;
+}
+
+.new-password-body .row .col-11 form input[type="submit"]{
+    border-radius: 50px;
+    margin-bottom: 0;
+    height: 44px;
+}
+
+.new-password-body .row .col-11 form .alert{
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: #F7F8FA;
+}
+
+.new-password-body .row .col-11 form .alert ul span{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.new-password-body .row .col-11 form .alert ul li{
+    margin-right: 20px;
+}
+
+.new-password-body .row .col-11 h1{
+    font-size: 30px;
+    color: #EA2A33;
+}
+
+.new-password-body .row .col-11 p{
+    font-size: 14px !important;
+    color: #8D99AE !important;
+}
+
+.new-password-body .row .col-11 form label{
+    color: #2B2D42 !important;
+}
+
+/* End New Password Body */
+
+/******************************* End New Password Page *******************************/
+
+/******************************* Start Updated Password Page *******************************/
+
+/* Start Updated Password Body */
+
+.updated-password-body{
+    padding: 145px 0;
+}
+
+.updated-password-body .row .col-11{
+    padding: 32px;
+    border: 2px solid #FDFDFD;
+    border-radius: 30px;
+    box-shadow: 0 10px 5px 0px #FDFDFD;
+}
+
+.updated-password-body .row .col-11 h1{
+    font-size: 36px;
+    color: #1B0E0E;
+}
+
+.updated-password-body .row .col-11 p{
+    width: 80%;
+    margin-bottom: 32px !important;
+    font-size: 16px !important;
+    color: #575353 !important;
+}
+
+.updated-password-body .heart-box{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #DBEAFE;
+    line-height: 64px;
+}
+
+.updated-password-body .heart-box img{
+    width: 40px;
+    height: 40px;
+}
+
+.updated-password-body .row .col-11 a{
+    display: block;
+    width: 80%;
+    /* height: 48px; */
+    border-radius: 50px;
+    background-color: #D93749;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* End Updated Password Body */
+
+/******************************* End Updated Password Page *******************************/
+
+
+/******************************* Start Regestration Intro Page *******************************/
+
+/* Start Navbar */
+
+.nav-regestration-intro .login a{
+    width: 150px !important;
+    padding: 8px;
+}
+
+/* End Navbar */
+
+/* Staet Regestration Intro Body */
+
+.regestration-intro-body{
+    background-color: #F3F4F6;
+    padding: 96px 0;
+    margin-bottom: 0;
+}
+
+
+.regestration-intro-body .row .col-11{
+    padding: 0;
+    border: 2px solid transparent;
+    /* border-radius: 30px; */
+    box-shadow: 0 10px 5px 0px transparent;
+}
+
+.regestration-intro-body .row .col-11 .one{
+    font-size: 48px;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+@media (max-width:991px) {
+    .regestration-intro-body .row .col-11 .one{
+        font-size: 30px;
+    }
+}
+
+.regestration-intro-body .row .col-11 .worry{
+    font-size: 18px !important;
+    color: #6B7280 !important;
+}
+
+.regestration-intro-body .card-option h5{
+    font-size: 20px;
+    font-weight: bold;
+    color: #1F2937;
+}
+
+.card-option {
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    border-radius: 10px;
+    padding: 26px !important;
+}
+
+.card-option.selected {
+    border: 2px solid #dc3545 !important; 
+    background-color: #FEE2E2;
+}
+
+.card-option .icon {
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.regestration-intro-body .btn{
+    border-radius: 50px;
+    padding: 16px;
+}
+
+/* End Regestration Intro Body */
+
+/******************************* End Regestration Intro Page *******************************/
+
+/******************************* Start Regestration Donor Page *******************************/
+
+/* Start Navbar */
+
+.nav-regestration-donor .login a{
+    width: 150px !important;
+    padding: 8px;
+}
+
+/* End Navbar */
+
+.regestration-donor{
+    padding: 48px 0;
+}
+
+.regestration-donor h1{
+    font-size: 36px !important;
+    font-weight: bold !important;
+    color: #2B2D42 !important;
+}
+
+.regestration-donor p{
+    font-size: 18px;
+    color: #4B5563;
+}
+
+.regestration-donor form label{
+    font-size: 14pc;
+}
+
+.regestration-donor form label span{
+    color: #D90429;
+}
+
+.regestration-donor form input{
+    background-color: #FEE2E2 !important;
+}
+
+/******************************* End Regestration Donor Page *******************************/
