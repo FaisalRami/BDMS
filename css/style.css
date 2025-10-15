@@ -367,7 +367,7 @@ nav{
 .copy{
     background-color: #00637C;
     padding: 32px 0;
-    height: 84px;
+    /* height: 84px; */
 }
 
 .copy p{
@@ -1125,8 +1125,6 @@ nav .login-contact a{
     }
 }
 
-
-
 .regestration-donor h1{
     font-size: 36px !important;
     font-weight: bold !important;
@@ -1202,12 +1200,12 @@ nav .login-contact a{
     margin-bottom: 0;
 }
 
-.regestration-donor .row .col{
+.regestration-organization .row .col{
     background-color: #FFFFFF;
     margin-bottom: 42px !important;
 }
 
-.regestration-donor .row .col form input ,.regestration-organization form select ,.regestration-organization form textarea{
+.regestration-organization .row .col form input ,.regestration-organization form select ,.regestration-organization form textarea{
     background-color: #FFFFFF !important;
 }
 
@@ -1245,3 +1243,176 @@ nav .login-contact a{
 /* End Regestration Organization Body */
 
 /******************************* End Regestration Organization Page *******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************* Start Dashboards *******************************/
+
+
+/******************************* Start Doner Home Page *******************************/
+
+/* Start Slidebar */
+
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 24px !important;
+    padding-top: 8px !important;
+    background-color: #FFFFFF;
+}
+
+@media (max-width:767px) {
+    .offcanvas {
+        width: 50% !important;
+    }
+}
+
+.doner-home .navbar-brand{
+    margin-right: 0 !important;
+    margin-bottom: 70px;
+    display: inline-block;
+    /* margin-top: -20px; */
+}
+
+.doner-home nav{
+    position: relative;
+}
+
+.doner-home nav .out{
+    position:absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 200px;
+}
+
+.doner-home nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.doner-home nav ul li {
+  margin-right: 0 !important;
+  width: 100%;
+}
+
+.doner-home nav ul .active{
+    background-color: #D90429 !important;
+    color: #FFFFFF !important;
+    border-radius: 10px !important;
+}
+
+
+.doner-home nav ul li:not(:last-child){
+    margin-bottom: 12px !important;
+}
+
+.doner-home nav ul li a{
+    color: #2D3748 !important;
+}
+
+.doner-home .offcanvas{
+    width: 30%;
+}
+
+/* End Slidebar */
+
+/* Start Doner Home Body */
+
+.doner-home .doner-home-body{
+    background-color: #F9FAFB;
+}
+
+.doner-home .doner-home-body .header {
+    padding-top: 0px !important;
+       
+}
+
+.doner-home .doner-home-body .bor{
+    border-top: 2px solid #F3F5F6;
+}
+
+.doner-home .doner-home-body .header h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0px !important;
+    color: #2D3748;
+}
+
+.doner-home .doner-home-body .header p{
+    color: #2D3748;
+    font-size: 14px;
+}
+
+.doner-home .doner-home-body .header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.doner-home .doner-home-body .clock .col{
+    margin-top: 33px;
+    padding: 17px 0;
+    border: 2px solid #F6A9B3;
+    border-radius: 10px;
+    /* margin-right: 11px;
+    margin-left: 11px; */
+}
+
+.doner-home .doner-home-body .clock h1{
+    font-size: 24px;
+    color: #2D3748;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.doner-home .doner-home-body .statistics{
+    margin-top: 25px;
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.doner-home .doner-home-body .statistics h1{
+    font-size: 24px;
+    color: #2D3748;
+    margin-bottom: 24px;
+}
+
+.doner-home .doner-home-body .statistics .col-6 div{
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    padding: 16px;
+    height: 100%;
+}
+
+.doner-home .doner-home-body .statistics .col-6 div img{
+    width: 30px;
+    height: 36px;
+}
+
+.doner-home .doner-home-body .statistics .col-6 div small{
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.doner-home .doner-home-body .statistics .col-6 div h1{
+    color: #2D3748;
+    font-size: 24px;
+}
+
+
+/* End Doner Home Body */
+
+/******************************* End Doner Home Page *******************************/
+
+
+/******************************* End Dashboard *******************************/

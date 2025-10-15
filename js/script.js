@@ -25,3 +25,9 @@ function goToPage() {
     window.location.href = 'regestrationOrganization.html';
   }
 }
+
+Dropzone.options.myDropzone = {
+    url: "/fake-upload",
+    autoProcessQueue: false,
+    acceptedFiles: "image/*"
+  };

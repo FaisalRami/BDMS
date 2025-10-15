@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية للمتبرع</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+    <!-- Bootstrap V5.1.3 Css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome V6.7.2 Css File -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- My Css File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="doner-home">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- الشريط الجانبي يظهر فقط في الشاشات الكبيرة -->
+                <nav class="col-lg-2 d-none d-lg-block sidebar border-end">
+                    <a class="navbar-brand" href="donerHome.html">
+                        <img class="w-100" src="images/brand.png" alt="">
+                    </a>
+                    <ul class="row nav text-end">
+                        <li class="nav-item col">
+                            <a class="nav-link active" href="#"> <i class="fa-solid fa-house"
+                                    style="margin-left: 12px !important"></i> الرئيسية </a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#"> <i class="fa-solid fa-user"
+                                    style="margin-left: 12px !important"></i> الملف الشخصي </a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#"> <i class="fa-solid fa-clock-rotate-left"
+                                    style="margin-left: 12px !important"></i> السجل </a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#"> <i class="fa-solid fa-table-list"
+                                    style="margin-left: 12px !important"></i> الطلبات </a>
+                        </li>
+                        <li class="nav-item out col">
+                            <a class="nav-link" href="#"> <i class="fa-solid fa-arrow-right-from-bracket"
+                                    style="margin-left: 12px !important"></i> تسجيل الخروج </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- الزر الذي يظهر فقط في الشاشات الصغيرة -->
+                <div class="d-lg-none p-2 d-flex justify-content-between">
+                    <a class="navbar-brand mb-0" href="donerHome.html">
+                        <img class="w-100" src="images/brand.png" alt="">
+                    </a>
+                    <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileSidebar"><span><i class="fa-solid fa-bars"></i></span></button>
+                </div>
+                <!-- السايدبار في الشاشات الصغيرة كـ Offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileSidebar">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a class="navbar-brand" href="donerHome.html">
+                            <img class="w-100" src="images/brand.png" alt="">
+                        </a>
+                        <ul class="n2 nav text-end">
+                            <li class="nav-item"
+                                style="margin-right: 0 !important; width: 100%;        margin-bottom: 12px !important">
+                                <a class="nav-link active" style="background-color: #D90429 !important;
+                                color: #FFFFFF !important; border-radius: 10px !important;" href="#"> <i
+                                        class="fa-solid fa-house" style="margin-left: 12px !important"></i>
+                                    الرئيسية </a>
+                            </li>
+                            <li class="nav-item"
+                                style="margin-right: 0 !important; width: 100%; margin-bottom: 12px !important; ">
+                                <a class="nav-link" style=" color: #2D3748 !important;" href="#"> <i
+                                        class="fa-solid fa-user"
+                                        style="margin-left: 12px !important; color: #2D3748 !important;"></i> الملف
+                                    الشخصي </a>
+                            </li>
+                            <li class="nav-item"
+                                style="margin-right: 0 !important; width: 100%; margin-bottom: 12px !important;">
+                                <a class="nav-link" style=" color: #2D3748 !important;" href="#"> <i
+                                        class="fa-solid fa-clock-rotate-left" style="margin-left: 12px !important;"></i>
+                                    السجل </a>
+                            </li>
+                            <li class="nav-item"
+                                style="margin-right: 0 !important; width: 100%; margin-bottom: 12px !important;">
+                                <a class="nav-link" style=" color: #2D3748 !important;" href="#"> <i
+                                        class="fa-solid fa-table-list" style="margin-left: 12px !important;"></i>
+                                    الطلبات </a>
+                            </li>
+                            <li class="nav-item out" style="margin-right: 0 !important; width: 100%; margin-top: 70px;">
+                                <a class="nav-link" href="#" style=" color: #2D3748 !important;"> <i
+                                        class="fa-solid fa-arrow-right-from-bracket"
+                                        style="margin-left: 12px !important;"></i> تسجيل الخروج </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- المحتوى الرئيسي -->
+                <section class="col-lg-10 col-12 doner-home-body pt-3">
+                    <div class="container-fluid">
+                        <div class="pb-2">
+                            <div class="header row justify-content-between">
+                                <h1 class="col-2 p-0">لوحة التحكم</h1>
+                                <div class="col p-0 d-flex justify-content-end">
+                                    <i class="fa-regular fa-bell ms-4" style="margin-top: 12px !important;"></i>
+                                    <a href="" class="d-flex">
+                                        <p class="ms-2 text-muted" style="margin-top: 7px !important;">سارة النجار</p>
+                                        <img src="images/donor-profile picture.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid clock bor">
+                        <div class="row">
+                            <div class="col text-center">
+                                <small class="text-muted">أهلية التبرع التالية في:</small>
+                                <div>
+                                    <i class="far fa-hourglass ms-1" style="margin-bottom: 2px; color: #EF233C;"></i>
+                                    <h1>55d 18h 42m 5s</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="container-fluid">
+                            <div class="row statistics">
+                                <div class="col-12">
+                                    <h1>الإحصائيات الخاصة بك</h1>
+                                    <div class="row g-3">
+                                        <div class="col-6 col-md-4 text-center">
+                                            <div>
+                                                <img src="images/doner-home/1.png" alt="">
+                                                <small class="text-muted d-block">إجمالي التبرعات</small>
+                                                <h1>7</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4 text-center">
+                                            <div>
+                                                <img src="images/doner-home/2.png" alt="">
+                                                <small class="text-muted d-block"> اخر تبرع</small>
+                                                <h1>12 يناير 2024</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4 text-center">
+                                            <div>
+                                                <img src="images/doner-home/3.png" alt="">
+                                                <small class="text-muted d-block"> الطلبات المستلمة</small>
+                                                <h1>15</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4 text-center">
+                                            <div>
+                                                <img src="images/doner-home/4.png" alt="">
+                                                <small class="text-muted d-block"> الطلبات المقبولة</small>
+                                                <h1>12</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4 text-center">
+                                            <div>
+                                                <img src="images/doner-home/5.png" alt="">
+                                                <small class="text-muted d-block"> معدل القبول</small>
+                                                <h1>80%</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4 text-center">
+                                            <div>
+                                                <img src="images/doner-home/6.png" alt="">
+                                                <small class="text-muted d-block">معدل الإنجاز </small>
+                                                <h1>100%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap V5.1.3 JS file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome V6.7.2 Js File -->
+    <script src="js/all.min.js"></script>
+</body>
+
+</html>
