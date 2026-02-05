@@ -131,7 +131,7 @@ nav{
 /* Start Why Donate */
 
 .whyDonate{
-    padding-top: 80px;
+    /* padding-top: 80px; */
 }
 .whyDonate .header h1{
     font-size: 36px;
@@ -202,7 +202,7 @@ nav{
 /* Srart How It Work */
 
 .howWork{
-    padding-top: 160px;
+    /* padding-top: 160px; */
 }
 
 .howWork .header .buttons ul li:nth-child(1) button{
@@ -226,6 +226,22 @@ nav{
     justify-content: center;
     margin-bottom: 48px;
 }
+
+    @media  (min-width:320px) and (max-width:991px) {
+        .navbar .navbar-collapse{
+            gap: 15px;
+            margin-top: 20px;
+            background-color: rgba(0,0,0,.5);
+            border-radius: 30px;
+            padding:10px;
+        }
+
+        .navbar .navbar-collapse ul li a , nav .login .m-2{
+            color: white !important;
+        }
+
+    
+    }
 
 .howWork .header .buttons ul li button{
     border-radius: 25px;
@@ -287,7 +303,7 @@ nav{
 }
 
 .howWork .body .col{
-    padding: 0 32px 32px 32px;
+    padding: 0 32px 0 32px;
 }
 
 /* End How It Work */
@@ -315,7 +331,7 @@ nav{
 /* Start Test */
 
 .test{
-    padding-top: 160px;
+    /* padding-top: 160px; */
 }
 
 .test .body .col p{
@@ -336,12 +352,12 @@ nav{
 /* Start Partners */
 
 .partners{
-    padding-top: 50px;
+    /* padding-top: 50px; */
     margin-bottom: 80px;
 }
 
 .partners .header h1{
-    margin-bottom: 48px;
+    margin-bottom: 48px !important;
     font-size: 36px;
     font-weight: bold;
     color: #000068;
@@ -500,7 +516,7 @@ nav{
 /* Start Our team */
 
 .header {
-    padding-top: 64px !important;
+    padding-top: 80px !important;
 }
 
 .header h1{
@@ -745,7 +761,7 @@ nav .login-contact a{
 /* Start Login Body */
 
 .login-body{
-    margin-bottom: 57px;
+    margin-bottom: 15px;
 }
 
 .login-body .row .col-9{
@@ -969,7 +985,7 @@ nav .login-contact a{
 /* Start Updated Password Body */
 
 .updated-password-body{
-    padding: 145px 0;
+    padding: 45px 0;
 }
 
 .updated-password-body .row .col-11{
@@ -1115,7 +1131,7 @@ nav .login-contact a{
 }
 
 .regestration-donor .row .col{
-    padding-bottom: 300px;
+    /* padding-bottom: 300px; */
 }
 
 
