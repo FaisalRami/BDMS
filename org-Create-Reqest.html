@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إنشاء طلب تبرع - BloodBridge</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/org-Create-Reqest.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">🏠</i>
+          <span>الرئيسية</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">👤</i>
+          <span>الملف الشخصي</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">🕒</i>
+          <span>السجل</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">📋</i>
+          <span>تتبع الطلبات</span>
+        </a>
+      </li>
+      <li class="menu-item active">
+        <a href="#">
+          <i class="icon">➕</i>
+          <span>إنشاء طلب</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">📊</i>
+          <span>التقارير</span>
+        </a>
+      </li>
+      <li class="menu-item logout">
+        <a href="#">
+          <i class="icon">🚪</i>
+          <span>تسجيل الخروج</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Header -->
+  <div class="mobile-header">
+    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    <div class="logo">
+      <div class="logo-icon">🩸</div>
+      <span>BloodBridge</span>
+    </div>
+    <div class="mobile-profile">
+      <img src="https://via.placeholder.com/50" alt="Profile" />
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <h1>إنشاء طلب</h1>
+        <p class="top-bar-subtitle">مرحباً بعودتك، منظمة Unity Health!</p>
+      </div>
+      <div class="top-bar-actions">
+        <button class="notification-btn">
+          <span class="notification-icon">🔔</span>
+          <span class="notification-badge">2</span>
+        </button>
+        <div class="profile-section">
+          <div class="profile-info">
+            <span class="profile-name">منظمة Unity Health</span>
+            <span class="profile-role">مؤسسة</span>
+          </div>
+          <img
+            src="https://via.placeholder.com/50"
+            alt="Profile"
+            class="profile-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content-wrapper">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h2>إنشاء طلب تبرع بالدم</h2>
+        <p class="page-description">املأ النموذج أدناه لطلب تبرعات الدم.</p>
+      </div>
+
+      <!-- Create Request Form -->
+      <div class="form-card">
+        <form id="create-request-form">
+          <!-- Request Details Section -->
+          <div class="form-section">
+            <h3 class="section-title">تفاصيل الطلب</h3>
+            
+            <div class="form-row">
+              <!-- Request Type -->
+              <div class="form-group full-width">
+                <label class="form-label">نوع الطلب</label>
+                <div class="radio-group">
+                  <label class="radio-option selected">
+                    <input type="radio" name="requestType" value="urgent" checked />
+                    <span class="radio-icon urgent">⚠️</span>
+                    <span class="radio-text">عاجل</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="requestType" value="scheduled" />
+                    <span class="radio-icon">📅</span>
+                    <span class="radio-text">مجدول</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <!-- Number of Units -->
+              <div class="form-group">
+                <label for="units" class="form-label">عدد الوحدات</label>
+                <input
+                  type="number"
+                  id="units"
+                  class="form-input"
+                  placeholder="مثال: 5"
+                  min="1"
+                  required
+                />
+              </div>
+
+              <!-- Blood Type -->
+              <div class="form-group">
+                <label for="bloodType" class="form-label">فصيلة الدم المطلوبة</label>
+                <select id="bloodType" class="form-select" required>
+                  <option value="">اختر فصيلة الدم</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <!-- Deadline -->
+              <div class="form-group full-width">
+                <label for="deadline" class="form-label">الموعد النهائي</label>
+                <input
+                  type="datetime-local"
+                  id="deadline"
+                  class="form-input"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Information Section -->
+          <div class="form-section">
+            <h3 class="section-title">معلومات إضافية</h3>
+            
+            <div class="form-row">
+              <div class="form-group full-width">
+                <label for="notes" class="form-label">ملاحظات/تعليمات للمتبرع</label>
+                <textarea
+                  id="notes"
+                  class="form-textarea"
+                  rows="5"
+                  placeholder="يرجى ذكر أي تعليمات محددة للمتبرعين..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="cancel-btn">إلغاء</button>
+            <button type="submit" class="btn-submit">إرسال الطلب</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="modal-content success-modal">
+      <div class="modal-icon success">✅</div>
+      <h2 class="modal-title">تم إنشاء الطلب بنجاح!</h2>
+      <p class="modal-message">تم إرسال طلب التبرع بالدم وسيتم إشعار المتبرعين المحتملين قريباً.</p>
+      <div class="modal-actions">
+        <button class="btn-modal btn-primary" id="view-requests-btn">عرض الطلبات</button>
+        <button class="btn-modal btn-secondary" id="create-another-btn">إنشاء طلب آخر</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/org-Create-Reqest.js"></script>
+</body>
+</html>

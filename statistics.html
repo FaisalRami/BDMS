@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الإحصائيات - BloodBridge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="css/statistics.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🩸</div>
+          <span>BloodBridge</span>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🏠</i>
+            <span>الرئيسية</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">✓</i>
+            <span>التحقق</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👥</i>
+            <span>إدارة المستخدمين</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="#">
+            <i class="icon">📊</i>
+            <span>الإحصائيات</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👤</i>
+            <span>المشرفين الفرعيين</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">⚙️</i>
+            <span>الإعدادات</span>
+          </a>
+        </li>
+        <li class="menu-item logout">
+          <a href="#">
+            <i class="icon">🚪</i>
+            <span>تسجيل الخروج</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+      <div class="mobile-profile">
+        <img src="https://via.placeholder.com/50" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-title">
+          <h1>الإحصائيات</h1>
+          <p class="top-bar-subtitle">المقاييس والرؤى الرئيسية لطلبات التبرع بالدم.</p>
+        </div>
+        <div class="top-bar-actions">
+          <button class="notification-btn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">2</span>
+          </button>
+          <div class="profile-section">
+            <div class="profile-info">
+              <span class="profile-name">منظمة Unity Health</span>
+              <span class="profile-role">مؤسسة</span>
+            </div>
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-wrapper">
+        <!-- Statistics Cards -->
+        <div class="stats-cards-grid">
+          <div class="stat-card-box card-green">
+            <div class="stat-card-content">
+              <span class="stat-card-label">الطلبات المكتملة</span>
+              <span class="stat-card-value">1,234</span>
+            </div>
+            <div class="stat-card-icon-box">
+              <span class="stat-card-icon">✓</span>
+            </div>
+          </div>
+
+          <div class="stat-card-box card-blue">
+            <div class="stat-card-content">
+              <span class="stat-card-label">الطلبات المرسلة</span>
+              <span class="stat-card-value">2,567</span>
+            </div>
+            <div class="stat-card-icon-box">
+              <span class="stat-card-icon">▶</span>
+            </div>
+          </div>
+
+          <div class="stat-card-box card-yellow">
+            <div class="stat-card-content">
+              <span class="stat-card-label">نسبة القبول</span>
+              <span class="stat-card-value">48.07%</span>
+            </div>
+            <div class="stat-card-icon-box">
+              <span class="stat-card-icon">%</span>
+            </div>
+          </div>
+
+          <div class="stat-card-box card-purple">
+            <div class="stat-card-content">
+              <span class="stat-card-label">إجمالي المتبرعين</span>
+              <span class="stat-card-value">5,890</span>
+            </div>
+            <div class="stat-card-icon-box">
+              <span class="stat-card-icon">👥</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+          <!-- Most Needed Blood Type -->
+          <div class="blood-type-card">
+            <div class="blood-type-header">
+              <h3>فصيلة الدم الأكثر احتياجاً</h3>
+            </div>
+            <div class="blood-type-main">
+              <div class="blood-type-center">
+                <span class="blood-type-display">O+</span>
+                <span class="blood-type-label">الأكثر طلباً</span>
+              </div>
+            </div>
+            <div class="blood-types-list">
+              <div class="blood-type-item">
+                <span class="blood-type-name">A+</span>
+                <span class="blood-type-percentage">23%</span>
+              </div>
+              <div class="blood-type-item">
+                <span class="blood-type-name">B+</span>
+                <span class="blood-type-percentage">18%</span>
+              </div>
+              <div class="blood-type-item">
+                <span class="blood-type-name">AB+</span>
+                <span class="blood-type-percentage">9%</span>
+              </div>
+              <div class="blood-type-item">
+                <span class="blood-type-name">أخرى</span>
+                <span class="blood-type-percentage">15%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activities -->
+          <div class="activities-card">
+            <div class="activities-header">
+              <h3>الأنشطة الأخيرة</h3>
+            </div>
+            <div class="activities-list">
+              <div class="activity-item">
+                <div class="activity-icon activity-icon-blue">➕</div>
+                <div class="activity-content">
+                  <p class="activity-text">تم إنشاء طلب تبرع جديد لـ A+ blood.</p>
+                  <span class="activity-time">منذ دقيقتين</span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon activity-icon-green">✓</div>
+                <div class="activity-content">
+                  <p class="activity-text">تمت الموافقة على التحقق من المتبرع John Doe.</p>
+                  <span class="activity-time">منذ 15 دقيقة</span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon activity-icon-yellow">👤</div>
+                <div class="activity-content">
+                  <p class="activity-text">متبرع جديد Jane Smith مسجل. في انتظار التحقق.</p>
+                  <span class="activity-time">منذ ساعة واحدة</span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon activity-icon-red">✕</div>
+                <div class="activity-content">
+                  <p class="activity-text">تم إلغاء طلب التبرع لـ B-.</p>
+                  <span class="activity-time">منذ 3 ساعات</span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon activity-icon-purple">📢</div>
+                <div class="activity-content">
+                  <p class="activity-text">تم إطلاق حملة جديدة "Summer Drive".</p>
+                  <span class="activity-time">أمس</span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon activity-icon-green">✓</div>
+                <div class="activity-content">
+                  <p class="activity-text">تم إتمام طلب التبرع لـ O+ بنجاح.</p>
+                  <span class="activity-time">أمس</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn-view-all">عرض جميع الأنشطة</button>
+          </div>
+        </div>
+
+        <!-- Peak Interaction Times Chart -->
+        <div class="chart-full-card">
+          <div class="chart-full-header">
+            <h3>أوقات التفاعل الذروة</h3>
+          </div>
+          <div class="chart-full-container">
+            <canvas id="peakTimesChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/statistics.js"></script>
+  </body>
+</html>

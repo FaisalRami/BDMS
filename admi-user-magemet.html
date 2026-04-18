@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إدارة المستخدمين - BloodBridge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/admi-user-magemet.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🩸</div>
+          <span>BloodBridge</span>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🏠</i>
+            <span>الرئيسية</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">✓</i>
+            <span>التحقق</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="#">
+            <i class="icon">👥</i>
+            <span>إدارة المستخدمين</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📊</i>
+            <span>الإحصائيات</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👤</i>
+            <span>المشرفين الفرعيين</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">⚙️</i>
+            <span>الإعدادات</span>
+          </a>
+        </li>
+        <li class="menu-item logout">
+          <a href="#">
+            <i class="icon">🚪</i>
+            <span>تسجيل الخروج</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+      <div class="mobile-profile">
+        <img src="https://via.placeholder.com/50" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content" style="width: calc(100% - 280px);">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-title">
+          <h1>لوحة التحكم</h1>
+          <p class="top-bar-subtitle">مرحباً بعودتك، المشرف. إليك ما يحدث مع BloodBridge.</p>
+        </div>
+        <div class="top-bar-actions">
+          <button class="notification-btn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">2</span>
+          </button>
+          <div class="profile-section">
+            <div class="profile-info">
+              <span class="profile-name">منظمة Unity Health</span>
+              <span class="profile-role">مؤسسة</span>
+            </div>
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-wrapper">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h2>إدارة المستخدمين</h2>
+        </div>
+
+        <!-- User Management Card -->
+        <div class="management-card">
+          <!-- Tabs and Actions -->
+          <div class="card-header">
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="donors">المتبرعين</button>
+              <button class="tab-btn" data-tab="organizations">المنظمات</button>
+            </div>
+            <div class="header-actions">
+              <button class="btn-filter" id="filter-btn">
+                <span class="filter-icon">⚙</span>
+                <span>تصفية</span>
+              </button>
+              <button class="btn-download" id="download-data-btn">
+                <span class="download-icon">⬇</span>
+                <span>تحميل البيانات</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-container">
+            <table class="users-table" id="users-table">
+              <thead>
+                <tr>
+                  <th>معرف المستخدم</th>
+                  <th>الاسم</th>
+                  <th>البريد الإلكتروني</th>
+                  <th>فصيلة الدم</th>
+                  <th>آخر تبرع</th>
+                  <th>الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="users-tbody">
+                <tr class="table-row">
+                  <td class="user-id-cell">#12345</td>
+                  <td class="name-cell">صوفيا كارتر</td>
+                  <td class="email-cell">sophia.carter@email.com</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">O+</span>
+                  </td>
+                  <td class="date-cell">2023-11-15</td>
+                  <td class="actions-cell">
+                    <div class="actions-container">
+                      <button class="btn-action btn-view" title="عرض" data-user="صوفيا كارتر">
+                        <span class="action-icon">👁</span>
+                      </button>
+                      <button class="btn-action btn-delete" title="حذف" data-user="صوفيا كارتر">
+                        <span class="action-icon">🚫</span>
+                      </button>
+                      <button class="btn-action-toggle" data-row="0">
+                        <span class="toggle-icon">▼</span>
+                      </button>
+                    </div>
+                    <div class="actions-dropdown" id="dropdown-0">
+                      <button class="dropdown-action btn-view-mobile" data-user="صوفيا كارتر">
+                        <span class="action-icon">👁</span>
+                        <span>عرض التفاصيل</span>
+                      </button>
+                      <button class="dropdown-action btn-delete-mobile" data-user="صوفيا كارتر">
+                        <span class="action-icon">🚫</span>
+                        <span>حذف المستخدم</span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="user-id-cell">#67890</td>
+                  <td class="name-cell">إيثان بينيت</td>
+                  <td class="email-cell">ethan.bennett@email.com</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">A-</span>
+                  </td>
+                  <td class="date-cell">2023-10-20</td>
+                  <td class="actions-cell">
+                    <div class="actions-container">
+                      <button class="btn-action btn-view" title="عرض" data-user="إيثان بينيت">
+                        <span class="action-icon">👁</span>
+                      </button>
+                      <button class="btn-action btn-delete" title="حذف" data-user="إيثان بينيت">
+                        <span class="action-icon">🚫</span>
+                      </button>
+                      <button class="btn-action-toggle" data-row="1">
+                        <span class="toggle-icon">▼</span>
+                      </button>
+                    </div>
+                    <div class="actions-dropdown" id="dropdown-1">
+                      <button class="dropdown-action btn-view-mobile" data-user="إيثان بينيت">
+                        <span class="action-icon">👁</span>
+                        <span>عرض التفاصيل</span>
+                      </button>
+                      <button class="dropdown-action btn-delete-mobile" data-user="إيثان بينيت">
+                        <span class="action-icon">🚫</span>
+                        <span>حذف المستخدم</span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="user-id-cell">#11223</td>
+                  <td class="name-cell">أوليفيا هايز</td>
+                  <td class="email-cell">olivia.hayes@email.com</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">B+</span>
+                  </td>
+                  <td class="date-cell">2023-09-05</td>
+                  <td class="actions-cell">
+                    <div class="actions-container">
+                      <button class="btn-action btn-view" title="عرض" data-user="أوليفيا هايز">
+                        <span class="action-icon">👁</span>
+                      </button>
+                      <button class="btn-action btn-delete" title="حذف" data-user="أوليفيا هايز">
+                        <span class="action-icon">🚫</span>
+                      </button>
+                      <button class="btn-action-toggle" data-row="2">
+                        <span class="toggle-icon">▼</span>
+                      </button>
+                    </div>
+                    <div class="actions-dropdown" id="dropdown-2">
+                      <button class="dropdown-action btn-view-mobile" data-user="أوليفيا هايز">
+                        <span class="action-icon">👁</span>
+                        <span>عرض التفاصيل</span>
+                      </button>
+                      <button class="dropdown-action btn-delete-mobile" data-user="أوليفيا هايز">
+                        <span class="action-icon">🚫</span>
+                        <span>حذف المستخدم</span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="user-id-cell">#44556</td>
+                  <td class="name-cell">ليام فوستر</td>
+                  <td class="email-cell">liam.foster@email.com</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">AB-</span>
+                  </td>
+                  <td class="date-cell">2023-08-12</td>
+                  <td class="actions-cell">
+                    <div class="actions-container">
+                      <button class="btn-action btn-view" title="عرض" data-user="ليام فوستر">
+                        <span class="action-icon">👁</span>
+                      </button>
+                      <button class="btn-action btn-delete" title="حذف" data-user="ليام فوستر">
+                        <span class="action-icon">🚫</span>
+                      </button>
+                      <button class="btn-action-toggle" data-row="3">
+                        <span class="toggle-icon">▼</span>
+                      </button>
+                    </div>
+                    <div class="actions-dropdown" id="dropdown-3">
+                      <button class="dropdown-action btn-view-mobile" data-user="ليام فوستر">
+                        <span class="action-icon">👁</span>
+                        <span>عرض التفاصيل</span>
+                      </button>
+                      <button class="dropdown-action btn-delete-mobile" data-user="ليام فوستر">
+                        <span class="action-icon">🚫</span>
+                        <span>حذف المستخدم</span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="user-id-cell">#77889</td>
+                  <td class="name-cell">آفا مورجان</td>
+                  <td class="email-cell">ava.morgan@email.com</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">O-</span>
+                  </td>
+                  <td class="date-cell">2023-07-28</td>
+                  <td class="actions-cell">
+                    <div class="actions-container">
+                      <button class="btn-action btn-view" title="عرض" data-user="آفا مورجان">
+                        <span class="action-icon">👁</span>
+                      </button>
+                      <button class="btn-action btn-delete" title="حذف" data-user="آفا مورجان">
+                        <span class="action-icon">🚫</span>
+                      </button>
+                      <button class="btn-action-toggle" data-row="4">
+                        <span class="toggle-icon">▼</span>
+                      </button>
+                    </div>
+                    <div class="actions-dropdown" id="dropdown-4">
+                      <button class="dropdown-action btn-view-mobile" data-user="آفا مورجان">
+                        <span class="action-icon">👁</span>
+                        <span>عرض التفاصيل</span>
+                      </button>
+                      <button class="dropdown-action btn-delete-mobile" data-user="آفا مورجان">
+                        <span class="action-icon">🚫</span>
+                        <span>حذف المستخدم</span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- User Details Modal -->
+    <div class="modal-overlay" id="user-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>تفاصيل المستخدم</h2>
+          <button class="modal-close" id="close-user-modal">×</button>
+        </div>
+        <div class="modal-body" id="user-modal-body">
+          <!-- Content will be dynamically inserted -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal btn-close-modal" id="close-user-btn">
+            إغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="delete-modal">
+      <div class="modal-content confirmation-modal">
+        <div class="modal-header">
+          <h2>تأكيد الحذف</h2>
+          <button class="modal-close" id="close-delete-modal">×</button>
+        </div>
+        <div class="modal-body">
+          <p class="confirmation-message">
+            هل أنت متأكد من أنك تريد حذف هذا المستخدم؟ لا يمكن التراجع عن هذا الإجراء.
+          </p>
+          <p class="user-to-delete" id="user-to-delete"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal btn-confirm-delete" id="confirm-delete-btn">
+            <span>🗑</span>
+            <span>تأكيد الحذف</span>
+          </button>
+          <button class="btn-modal btn-cancel" id="cancel-delete-btn">
+            إلغاء
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/admi-user-magemet.js"></script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سجل الطلبات - BloodBridge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/org-Requests-History.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🩸</div>
+          <span>BloodBridge</span>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🏠</i>
+            <span>الرئيسية</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👤</i>
+            <span>الملف الشخصي</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="#">
+            <i class="icon">🕐</i>
+            <span>السجل</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📋</i>
+            <span>تتبع الطلبات</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">➕</i>
+            <span>إنشاء طلب</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📊</i>
+            <span>التقارير</span>
+          </a>
+        </li>
+        <li class="menu-item logout">
+          <a href="#">
+            <i class="icon">🚪</i>
+            <span>تسجيل الخروج</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+      <div class="mobile-profile">
+        <img src="https://via.placeholder.com/50" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-title">
+          <h1>السجل</h1>
+          <p class="top-bar-subtitle">مرحباً بعودتك، منظمة Unity Health!</p>
+        </div>
+        <div class="top-bar-actions">
+          <button class="notification-btn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">2</span>
+          </button>
+          <div class="profile-section">
+            <div class="profile-info">
+              <span class="profile-name">منظمة Unity Health</span>
+              <span class="profile-role">مؤسسة</span>
+            </div>
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-wrapper">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h2>سجل الطلبات</h2>
+          <button class="btn-download" id="download-btn">
+            <span class="download-icon">⬇</span>
+            <span>تحميل التقرير</span>
+          </button>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+          <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="البحث حسب رقم الطلب أو العنوان"
+            />
+          </div>
+          <select class="filter-select" id="statusFilter">
+            <option value="">الحالة: الكل</option>
+            <option value="completed">مكتمل</option>
+            <option value="cancelled">ملغي</option>
+            <option value="expired">منتهي</option>
+            <option value="partial">مكتمل جزئياً</option>
+          </select>
+          <select class="filter-select" id="bloodTypeFilter">
+            <option value="">فصيلة الدم: الكل</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+          <input
+            type="date"
+            id="dateFilter"
+            class="filter-select date-input"
+            placeholder="mm/dd/yyyy"
+          />
+        </div>
+
+        <!-- Request History Table Card -->
+        <div class="history-card">
+          <!-- Table -->
+          <div class="table-container">
+            <table  id="history-table" class="history-table">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-content">
+                      <span>رقم الطلب/العنوان</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>فصيلة الدم</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>الوحدات المطلوبة</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>التبرعات المستلمة</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>الموعد النهائي</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>الحالة</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>تاريخ الإنجاز</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>الإجراءات</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="history-tbody">
+                <tr class="table-row" data-status="completed" data-blood="A+">
+                  <td class="request-id-cell">REQ-2023-001</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">A+</span>
+                  </td>
+                  <td class="units-cell">5</td>
+                  <td class="donations-cell">5</td>
+                  <td class="deadline-cell">2023-01-20</td>
+                  <td class="status-cell">
+                    <span class="status-badge completed">مكتمل</span>
+                  </td>
+                  <td class="completion-cell">2023-01-20</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-001">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="cancelled" data-blood="B-">
+                  <td class="request-id-cell">REQ-2023-002</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">B-</span>
+                  </td>
+                  <td class="units-cell">3</td>
+                  <td class="donations-cell">0</td>
+                  <td class="deadline-cell">2023-02-15</td>
+                  <td class="status-cell">
+                    <span class="status-badge cancelled">ملغي</span>
+                  </td>
+                  <td class="completion-cell">N/A</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-002">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="expired" data-blood="O+">
+                  <td class="request-id-cell">REQ-2023-003</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">O+</span>
+                  </td>
+                  <td class="units-cell">10</td>
+                  <td class="donations-cell">0</td>
+                  <td class="deadline-cell">2023-03-10</td>
+                  <td class="status-cell">
+                    <span class="status-badge expired">منتهي</span>
+                  </td>
+                  <td class="completion-cell">2023-03-10</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-003">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="partial" data-blood="AB+">
+                  <td class="request-id-cell">REQ-2023-004</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">AB+</span>
+                  </td>
+                  <td class="units-cell">2</td>
+                  <td class="donations-cell">1</td>
+                  <td class="deadline-cell">2023-04-05</td>
+                  <td class="status-cell">
+                    <span class="status-badge partial">مكتمل جزئياً</span>
+                  </td>
+                  <td class="completion-cell">2023-04-05</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-004">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="completed" data-blood="A-">
+                  <td class="request-id-cell">REQ-2023-005</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">A-</span>
+                  </td>
+                  <td class="units-cell">4</td>
+                  <td class="donations-cell">4</td>
+                  <td class="deadline-cell">2023-05-15</td>
+                  <td class="status-cell">
+                    <span class="status-badge completed">مكتمل</span>
+                  </td>
+                  <td class="completion-cell">2023-05-15</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-005">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="completed" data-blood="B+">
+                  <td class="request-id-cell">REQ-2023-006</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">B+</span>
+                  </td>
+                  <td class="units-cell">6</td>
+                  <td class="donations-cell">6</td>
+                  <td class="deadline-cell">2023-06-10</td>
+                  <td class="status-cell">
+                    <span class="status-badge completed">مكتمل</span>
+                  </td>
+                  <td class="completion-cell">2023-06-10</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-006">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="completed" data-blood="O-">
+                  <td class="request-id-cell">REQ-2023-007</td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge">O-</span>
+                  </td>
+                  <td class="units-cell">8</td>
+                  <td class="donations-cell">8</td>
+                  <td class="deadline-cell">2023-07-05</td>
+                  <td class="status-cell">
+                    <span class="status-badge completed">مكتمل</span>
+                  </td>
+                  <td class="completion-cell">2023-07-05</td>
+                  <td class="action-cell">
+                    <button class="btn-view-details" data-request="REQ-2023-007">
+                      عرض التفاصيل
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </main>
+
+    <!-- Details Modal -->
+    <div class="modal-overlay" id="details-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>تفاصيل الطلب</h2>
+          <button class="modal-close" id="close-modal">×</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Content will be dynamically inserted -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal btn-close-modal" id="close-modal-btn">
+            إغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/org-Requests-History.js"></script>
+  </body>
+</html>

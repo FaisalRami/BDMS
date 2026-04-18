@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إعدادات تعديل محتوى الصفحات - BloodBridge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+
+<body>
+  <!-- Sidebar (Hidden by default) -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">🏠</i>
+          <span>الرئيسية</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">✓</i>
+          <span>التحقق</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">👥</i>
+          <span>إدارة المستخدمين</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">📊</i>
+          <span>الإحصائيات</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="icon">👤</i>
+          <span>المشرفين الفرعيين</span>
+        </a>
+      </li>
+      <li class="menu-item active">
+        <a href="#">
+          <i class="icon">⚙️</i>
+          <span>الإعدادات</span>
+        </a>
+      </li>
+      <li class="menu-item logout">
+        <a href="#">
+          <i class="icon">🚪</i>
+          <span>تسجيل الخروج</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="sidebar-toggle-btn" id="sidebar-toggle-btn">
+    <span>☰</span>
+  </button>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <h1>إعدادات تعديل محتوى الصفحات</h1>
+      </div>
+      <div class="top-bar-actions">
+        <button class="notification-btn">
+          <span class="notification-icon">🔔</span>
+          <span class="notification-badge">2</span>
+        </button>
+        <div class="profile-section">
+          <div class="profile-info">
+            <span class="profile-name">المشرف الرئيسي</span>
+            <span class="profile-role">Admin</span>
+          </div>
+          <img src="https://via.placeholder.com/50" alt="Profile" class="profile-img" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content-wrapper">
+      <!-- Main Pages Tabs (Horizontal) -->
+      <div class="pages-tabs-container">
+        <div class="pages-tabs">
+          <button class="page-tab active" data-page="home">الصفحة الرئيسية</button>
+          <button class="page-tab" data-page="about">من نحن</button>
+          <button class="page-tab" data-page="contact">تواصل معنا</button>
+          <button class="page-tab" data-page="login">تسجيل الدخول</button>
+          <button class="page-tab" data-page="signup">حساب جديد</button>
+          <button class="page-tab" data-page="donor-register">التسجيل كمتبرع</button>
+          <button class="page-tab" data-page="org-register">التسجيل كمنظمة</button>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="content-grid">
+        <!-- Sections Tabs (Vertical) -->
+        <div class="sections-sidebar">
+          <!-- Home Page Sections -->
+          <div class="sections-group active" data-page="home">
+            <button class="section-tab active" data-section="home-hero">افتتاحية الصفحة</button>
+            <button class="section-tab" data-section="home-features">المميزات</button>
+            <button class="section-tab" data-section="home-how">كيف يعمل</button>
+            <button class="section-tab" data-section="home-cta">التسجيل</button>
+          </div>
+
+          <!-- About Page Sections -->
+          <div class="sections-group" data-page="about">
+            <button class="section-tab active" data-section="about-hero">افتتاحية الصفحة</button>
+            <button class="section-tab" data-section="about-mission">المهمة</button>
+            <button class="section-tab" data-section="about-values">القيم</button>
+            <button class="section-tab" data-section="about-team">الفريق</button>
+            <button class="section-tab" data-section="about-impact">التأثير</button>
+            <button class="section-tab" data-section="about-join">انضم إلى رحلتنا</button>
+          </div>
+
+          <!-- Contact Page Sections -->
+          <div class="sections-group" data-page="contact">
+            <button class="section-tab active" data-section="contact-hero">افتتاحية الصفحة</button>
+            <button class="section-tab" data-section="contact-info">معلومات الاتصال</button>
+            <button class="section-tab" data-section="contact-faq">الأسئلة الشائعة</button>
+          </div>
+
+          <!-- Login Page Sections -->
+          <div class="sections-group" data-page="login">
+            <button class="section-tab active" data-section="login-content">محتوى الصفحة</button>
+          </div>
+
+          <!-- Signup Page Sections -->
+          <div class="sections-group" data-page="signup">
+            <button class="section-tab active" data-section="signup-hero">افتتاحية الصفحة</button>
+            <button class="section-tab" data-section="signup-donor">أنا متبرع</button>
+            <button class="section-tab" data-section="signup-org">أنا منظمة</button>
+          </div>
+
+          <!-- Donor Register Page Sections -->
+          <div class="sections-group" data-page="donor-register">
+            <button class="section-tab active" data-section="donor-content">محتوى الصفحة</button>
+          </div>
+
+          <!-- Org Register Page Sections -->
+          <div class="sections-group" data-page="org-register">
+            <button class="section-tab active" data-section="org-content">محتوى الصفحة</button>
+          </div>
+        </div>
+
+        <!-- Forms Content -->
+        <div class="forms-content">
+          <!-- Home Page Forms -->
+          <div class="page-forms active" data-page="home">
+            <!-- Home Hero Section -->
+            <div class="section-form active" data-section="home-hero">
+              <h2 class="section-form-title">قسم البطل (Hero)</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان الرئيسي:</label>
+                  <input type="text" class="form-input" value="مرحباً بك في موقعنا" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="3">هذا هو النص الترحيبي الذي يظهر في مقدمة الصفحة.</textarea>
+                </div>
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="home-hero-image" class="file-input" accept="image/*" />
+                    <label for="home-hero-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span> اختر صورة </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Home Features Section -->
+            <div class="section-form" data-section="home-features">
+              <h2 class="section-form-title">قسم المميزات</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="مميزاتنا" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="2">اكتشف ما يجعلنا مميزين</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الأول</div>
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="home-features-image" class="file-input" accept="image/*" />
+                    <label for="home-features-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="سهل الاستخدام" />
+                </div>
+                <div class="form-group">
+                  <label>النص:</label>
+                  <textarea class="form-textarea" rows="2">واجهة بسيطة وسهلة</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الثاني</div>
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" class="file-input" accept="image/*" />
+                    <label class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="آمن وموثوق" />
+                </div>
+                <div class="form-group">
+                  <label>النص:</label>
+                  <textarea class="form-textarea" rows="2">حماية كاملة لبياناتك</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الثالث</div>
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" class="file-input" accept="image/*" />
+                    <label class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="دعم متواصل" />
+                </div>
+                <div class="form-group">
+                  <label>النص:</label>
+                  <textarea class="form-textarea" rows="2">نحن هنا لمساعدتك دائماً</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Home How It Works Section -->
+            <div class="section-form" data-section="home-how">
+              <h2 class="section-form-title">قسم كيف يعمل</h2>
+
+              <!-- Sub Tabs for How It Works -->
+              <div class="sub-tabs">
+                <button class="sub-tab active" data-subtab="donor">كمتبرع</button>
+                <button class="sub-tab" data-subtab="org">كمنظمة</button>
+              </div>
+
+              <!-- Donor Content -->
+              <div class="subtab-content active" data-subtab="donor">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label>عنوان الصندوق الأول:</label>
+                    <input type="text" class="form-input" value="سجل حسابك" />
+                  </div>
+                  <div class="form-group">
+                    <label>نص الصندوق الأول:</label>
+                    <textarea class="form-textarea" rows="2">أنشئ حساباً بسهولة</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>عنوان الصندوق الثاني:</label>
+                    <input type="text" class="form-input" value="ابحث عن طلب" />
+                  </div>
+                  <div class="form-group">
+                    <label>نص الصندوق الثاني:</label>
+                    <textarea class="form-textarea" rows="2">اعثر على طلب مناسب</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>عنوان الصندوق الثالث:</label>
+                    <input type="text" class="form-input" value="تبرع وأنقذ حياة" />
+                  </div>
+                  <div class="form-group">
+                    <label>نص الصندوق الثالث:</label>
+                    <textarea class="form-textarea" rows="2">كن بطلاً لشخص ما</textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Organization Content -->
+              <div class="subtab-content" data-subtab="org">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label>عنوان الصندوق الأول:</label>
+                    <input type="text" class="form-input" value="سجل منظمتك" />
+                  </div>
+                  <div class="form-group">
+                    <label>نص الصندوق الأول:</label>
+                    <textarea class="form-textarea" rows="2">أنشئ حساب منظمة</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>عنوان الصندوق الثاني:</label>
+                    <input type="text" class="form-input" value="أنشئ طلباً" />
+                  </div>
+                  <div class="form-group">
+                    <label>نص الصندوق الثاني:</label>
+                    <textarea class="form-textarea" rows="2">حدد احتياجاتك</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>عنوان الصندوق الثالث:</label>
+                    <input type="text" class="form-input" value="تلقَّ التبرعات" />
+                  </div>
+                  <div class="form-group">
+                    <label>نص الصندوق الثالث:</label>
+                    <textarea class="form-textarea" rows="2">احصل على المساعدة</textarea>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Home CTA Section -->
+            <div class="section-form" data-section="home-cta">
+              <h2 class="section-form-title">قسم التسجيل</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="ابدأ رحلتك معنا اليوم" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="2">انضم إلى مجتمعنا وكن جزءاً من التغيير</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+          <!-- About Page Forms -->
+          <div class="page-forms" data-page="about">
+            <!-- About Hero Section -->
+            <div class="section-form active" data-section="about-hero">
+              <h2 class="section-form-title">افتتاحية الصفحة</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="من نحن" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea"
+                    rows="3">نحن منصة تربط بين المتبرعين بالدم والمنظمات الطبية لإنقاذ الأرواح</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- About Mission Section -->
+            <div class="section-form" data-section="about-mission">
+              <h2 class="section-form-title">المهمة</h2>
+              <div class="form-grid">
+                <div class="form-divider">الصندوق الأول</div>
+                <div class="form-group">
+                  <label>صورة الصندوق الأول:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="about-mission-image1" class="file-input" accept="image/*" />
+                    <label for="about-mission-image1" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>عنوان الصندوق الأول:</label>
+                  <input type="text" class="form-input" value="مهمتنا" />
+                </div>
+                <div class="form-group">
+                  <label>نص الصندوق الأول:</label>
+                  <textarea class="form-textarea"
+                    rows="3">توفير منصة آمنة وسهلة لربط المتبرعين بالمنظمات الطبية</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الثاني</div>
+                <div class="form-group">
+                  <label>صورة الصندوق الثاني:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="about-mission-image2" class="file-input" accept="image/*" />
+                    <label for="about-mission-image2" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>عنوان الصندوق الثاني:</label>
+                  <input type="text" class="form-input" value="رؤيتنا" />
+                </div>
+                <div class="form-group">
+                  <label>نص الصندوق الثاني:</label>
+                  <textarea class="form-textarea" rows="3">عالم لا يموت فيه أحد بسبب نقص الدم</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- About Values Section -->
+            <div class="section-form" data-section="about-values">
+              <h2 class="section-form-title">القيم</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="قيمنا الأساسية" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="2">المبادئ التي نؤمن بها ونعمل بها</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الأول</div>
+                <div class="form-group">
+                  <label>صورة الصندوق الأول:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="about-values-image1" class="file-input" accept="image/*" />
+                    <label for="about-values-image1" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>عنوان الصندوق الأول:</label>
+                  <input type="text" class="form-input" value="الشفافية" />
+                </div>
+                <div class="form-group">
+                  <label>نص الصندوق الأول:</label>
+                  <textarea class="form-textarea" rows="2">نحن ملتزمون بالشفافية الكاملة في جميع عملياتنا</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الثاني</div>
+                <div class="form-group">
+                  <label>صورة الصندوق الثاني:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="about-values-image2" class="file-input" accept="image/*" />
+                    <label for="about-values-image2" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>عنوان الصندوق الثاني:</label>
+                  <input type="text" class="form-input" value="الأمان" />
+                </div>
+                <div class="form-group">
+                  <label>نص الصندوق الثاني:</label>
+                  <textarea class="form-textarea" rows="2">حماية بيانات المستخدمين هي أولويتنا القصوى</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الثالث</div>
+                <div class="form-group">
+                  <label>صورة الصندوق الثالث:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="about-values-image3" class="file-input" accept="image/*" />
+                    <label for="about-values-image3" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>عنوان الصندوق الثالث:</label>
+                  <input type="text" class="form-input" value="السرعة" />
+                </div>
+                <div class="form-group">
+                  <label>نص الصندوق الثالث:</label>
+                  <textarea class="form-textarea" rows="2">الاستجابة السريعة لطلبات التبرع العاجلة</textarea>
+                </div>
+
+                <div class="form-divider">الصندوق الرابع</div>
+                <div class="form-group">
+                  <label>صورة الصندوق الرابع:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="about-values-image4" class="file-input" accept="image/*" />
+                    <label for="about-values-image4" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>عنوان الصندوق الرابع:</label>
+                  <input type="text" class="form-input" value="التعاون" />
+                </div>
+                <div class="form-group">
+                  <label>نص الصندوق الرابع:</label>
+                  <textarea class="form-textarea" rows="2">نعمل مع جميع الأطراف لإنقاذ الأرواح</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- About Team Section -->
+            <div class="section-form" data-section="about-team">
+              <h2 class="section-form-title">الفريق</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="تعرف على فريقنا" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="2">فريق متخصص من المحترفين الملتزمين بإنقاذ الأرواح</textarea>
+                </div>
+              </div>
+
+              <div class="form-divider">أعضاء الفريق</div>
+              <div class="team-members-list">
+                <div class="team-member-item">
+                  <div class="team-member-header">
+                    <span class="team-member-number">1</span>
+                    <button class="btn-delete-member">حذف</button>
+                  </div>
+                  <div class="form-group">
+                    <label>الصورة:</label>
+                    <div class="file-upload-area">
+                      <input type="file" id="about-team-image1" class="file-input" accept="image/*" />
+                      <label for="about-team-image1" class="file-upload-label">
+                        <span class="upload-icon">📁</span>
+                        <span>اختر صورة</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>الاسم:</label>
+                    <input type="text" class="form-input" value="أحمد محمود" />
+                  </div>
+                  <div class="form-group">
+                    <label>الوظيفة:</label>
+                    <input type="text" class="form-input" value="المدير التنفيذي" />
+                  </div>
+                  <div class="form-group">
+                    <label>المهمة:</label>
+                    <textarea class="form-textarea"
+                      rows="3">قيادة الفريق وتطوير الاستراتيجيات لتحقيق رؤية المنصة.</textarea>
+                  </div>
+                </div>
+
+                <div class="team-member-item">
+                  <div class="team-member-header">
+                    <span class="team-member-number">2</span>
+                    <button class="btn-delete-member">حذف</button>
+                  </div>
+                  <div class="form-group">
+                    <label>الصورة:</label>
+                    <div class="file-upload-area">
+                      <input type="file" id="about-team-image2" class="file-input" accept="image/*" />
+                      <label for="about-team-image2" class="file-upload-label">
+                        <span class="upload-icon">📁</span>
+                        <span>اختر صورة</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>الاسم:</label>
+                    <input type="text" class="form-input" value="فاطمة أحمد" />
+                  </div>
+                  <div class="form-group">
+                    <label>الوظيفة:</label>
+                    <input type="text" class="form-input" value="مديرة العمليات" />
+                  </div>
+                  <div class="form-group">
+                    <label>المهمة:</label>
+                    <textarea class="form-textarea"
+                      rows="3">إدارة العمليات اليومية وضمان جودة الخدمة المقدمة.</textarea>
+                  </div>
+                </div>
+
+                <div class="team-member-item">
+                  <div class="team-member-header">
+                    <span class="team-member-number">3</span>
+                    <button class="btn-delete-member">حذف</button>
+                  </div>
+                  <div class="form-group">
+                    <label>الصورة:</label>
+                    <div class="file-upload-area">
+                      <input type="file" id="about-team-image3" class="file-input" accept="image/*" />
+                      <label for="about-team-image3" class="file-upload-label">
+                        <span class="upload-icon">📁</span>
+                        <span>اختر صورة</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>الاسم:</label>
+                    <input type="text" class="form-input" value="محمد عبدالله" />
+                  </div>
+                  <div class="form-group">
+                    <label>الوظيفة:</label>
+                    <input type="text" class="form-input" value="مدير التقنية" />
+                  </div>
+                  <div class="form-group">
+                    <label>المهمة:</label>
+                    <textarea class="form-textarea" rows="3">تطوير وصيانة البنية التحتية التقنية للمنصة.</textarea>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-add-item btn-add-member">➕ إضافة عضو جديد</button>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- About Impact Section -->
+            <div class="section-form" data-section="about-impact">
+              <h2 class="section-form-title">التأثير</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="تأثيرنا في المجتمع" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea"
+                    rows="3">نحن فخورون بالإنجازات التي حققناها في مساعدة المحتاجين وإنقاذ الأرواح</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- About Join Section -->
+            <div class="section-form" data-section="about-join">
+              <h2 class="section-form-title">انضم إلى رحلتنا</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="كن جزءاً من التغيير" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="3">انضم إلينا اليوم وكن جزءاً من مجتمع ينقذ الأرواح</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+          <!-- Contact Page Forms -->
+          <div class="page-forms" data-page="contact">
+            <!-- Contact Hero Section -->
+            <div class="section-form active" data-section="contact-hero">
+              <h2 class="section-form-title">افتتاحية الصفحة</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="تواصل معنا" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="3">نحن هنا للإجابة على استفساراتك ومساعدتك في أي وقت</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="section-form" data-section="contact-info">
+              <h2 class="section-form-title">معلومات الاتصال</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>رقم الهاتف:</label>
+                  <input type="text" class="form-input" value="+970-59-123-4567" />
+                </div>
+                <div class="form-group">
+                  <label>الأيام المتاحة:</label>
+                  <input type="text" class="form-input" value="الأحد - الخميس" />
+                </div>
+                <div class="form-group">
+                  <label>الساعات المتاحة:</label>
+                  <input type="text" class="form-input" value="من 8:00 صباحاً - 5:00 مساءً" />
+                </div>
+                <div class="form-group">
+                  <label>البريد الإلكتروني:</label>
+                  <input type="email" class="form-input" value="info@bloodbridge.com" />
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Contact FAQ Section -->
+            <div class="section-form" data-section="contact-faq">
+              <h2 class="section-form-title">الأسئلة الشائعة</h2>
+              <div class="faq-list">
+                <div class="faq-item">
+                  <div class="faq-item-header">
+                    <span class="faq-number">1</span>
+                    <button class="btn-delete-faq">حذف</button>
+                  </div>
+                  <div class="form-group">
+                    <label>السؤال:</label>
+                    <input type="text" class="form-input" value="ما هي شروط التبرع؟" />
+                  </div>
+                  <div class="form-group">
+                    <label>الإجابة:</label>
+                    <textarea class="form-textarea"
+                      rows="3">يجب أن يكون عمرك بين 18-65 سنة ووزنك أكثر من 50 كجم.</textarea>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-item-header">
+                    <span class="faq-number">2</span>
+                    <button class="btn-delete-faq">حذف</button>
+                  </div>
+                  <div class="form-group">
+                    <label>السؤال:</label>
+                    <input type="text" class="form-input" value="كم مرة يمكنني التبرع؟" />
+                  </div>
+                  <div class="form-group">
+                    <label>الإجابة:</label>
+                    <textarea class="form-textarea" rows="3">يمكنك التبرع كل 3 أشهر.</textarea>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-item-header">
+                    <span class="faq-number">3</span>
+                    <button class="btn-delete-faq">حذف</button>
+                  </div>
+                  <div class="form-group">
+                    <label>السؤال:</label>
+                    <input type="text" class="form-input" value="هل التبرع آمن؟" />
+                  </div>
+                  <div class="form-group">
+                    <label>الإجابة:</label>
+                    <textarea class="form-textarea" rows="3">نعم، التبرع آمن تماماً باستخدام معدات معقمة.</textarea>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-add-item">➕ إضافة سؤال جديد</button>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+          <!-- Login Page Forms -->
+          <div class="page-forms" data-page="login">
+            <!-- Login Content Section -->
+            <div class="section-form active" data-section="login-content">
+              <h2 class="section-form-title">محتوى صفحة تسجيل الدخول</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="login-image" class="file-input" accept="image/*" />
+                    <label for="login-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="مرحباً بعودتك" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea"
+                    rows="3">قم بتسجيل الدخول للوصول إلى حسابك ومتابعة رحلتك في إنقاذ الأرواح.</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+          <!-- Signup Page Forms -->
+          <div class="page-forms" data-page="signup">
+            <!-- Signup Hero Section -->
+            <div class="section-form active" data-section="signup-hero">
+              <h2 class="section-form-title">افتتاحية الصفحة</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="انضم إلينا اليوم" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea"
+                    rows="3">اختر نوع الحساب المناسب لك وابدأ رحلتك في إنقاذ الأرواح.</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Signup Donor Section -->
+            <div class="section-form" data-section="signup-donor">
+              <h2 class="section-form-title">أنا متبرع</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="signup-doner-image" class="file-input" accept="image/*" />
+                    <label for="signup-doner-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="كن متبرعاً" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="2">انقذ الأرواح بتبرعك</textarea>
+                </div>
+
+                <div class="form-divider">المهام</div>
+                <div class="tasks-list">
+                  <div class="task-item">
+                    <input type="text" class="form-input" value="تسجيل سريع وسهل" />
+                    <button class="btn-delete-task">حذف</button>
+                  </div>
+                  <div class="task-item">
+                    <input type="text" class="form-input" value="ابحث عن طلبات قريبة منك" />
+                    <button class="btn-delete-task">حذف</button>
+                  </div>
+                  <div class="task-item">
+                    <input type="text" class="form-input" value="تتبع تبرعاتك" />
+                    <button class="btn-delete-task">حذف</button>
+                  </div>
+                </div>
+                <button class="btn-add-item">➕ إضافة مهمة جديدة</button>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+
+            <!-- Signup Organization Section -->
+            <div class="section-form" data-section="signup-org">
+              <h2 class="section-form-title">أنا منظمة</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="signup-organization-image" class="file-input" accept="image/*" />
+                    <label for="signup-organization-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="سجل منظمتك" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea" rows="2">احصل على التبرعات التي تحتاجها</textarea>
+                </div>
+
+                <div class="form-divider">المهام</div>
+                <div class="tasks-list">
+                  <div class="task-item">
+                    <input type="text" class="form-input" value="إنشاء طلبات التبرع" />
+                    <button class="btn-delete-task">حذف</button>
+                  </div>
+                  <div class="task-item">
+                    <input type="text" class="form-input" value="إدارة المتبرعين" />
+                    <button class="btn-delete-task">حذف</button>
+                  </div>
+                  <div class="task-item">
+                    <input type="text" class="form-input" value="تقارير مفصلة" />
+                    <button class="btn-delete-task">حذف</button>
+                  </div>
+                </div>
+                <button class="btn-add-item">➕ إضافة مهمة جديدة</button>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+          <!-- Donor Register Page Forms -->
+          <div class="page-forms" data-page="donor-register">
+            <!-- Donor Register Content Section -->
+            <div class="section-form active" data-section="donor-content">
+              <h2 class="section-form-title">محتوى صفحة التسجيل كمتبرع</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="donor-register-image" class="file-input" accept="image/*" />
+                    <label for="donor-register-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="سجل كمتبرع" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea"
+                    rows="3">املأ البيانات التالية لإنشاء حسابك كمتبرع وابدأ في إنقاذ الأرواح.</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+          <!-- Org Register Page Forms -->
+          <div class="page-forms" data-page="org-register">
+            <!-- Org Register Content Section -->
+            <div class="section-form active" data-section="org-content">
+              <h2 class="section-form-title">محتوى صفحة التسجيل كمنظمة</h2>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>الصورة:</label>
+                  <div class="file-upload-area">
+                    <input type="file" id="org-register-image" class="file-input" accept="image/*" />
+                    <label for="org-register-image" class="file-upload-label">
+                      <span class="upload-icon">📁</span>
+                      <span>اختر صورة</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>العنوان:</label>
+                  <input type="text" class="form-input" value="سجل منظمتك" />
+                </div>
+                <div class="form-group">
+                  <label>النص الفرعي:</label>
+                  <textarea class="form-textarea"
+                    rows="3">املأ بيانات منظمتك للانضمام إلى شبكتنا والحصول على التبرعات التي تحتاجها.</textarea>
+                </div>
+              </div>
+              <button class="btn-save">حفظ التغييرات</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/settings.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قائمة انتظار التحقق من المنظمات - BloodBridge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/admin-Orgaizatin-Varification-Queue.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🩸</div>
+          <span>BloodBridge</span>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="admin-home.html">
+            <i class="icon">🏠</i>
+            <span>الرئيسية</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="#">
+            <i class="icon">✓</i>
+            <span>التحقق</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👥</i>
+            <span>إدارة المستخدمين</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📊</i>
+            <span>الإحصائيات</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👤</i>
+            <span>المشرفين الفرعيين</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">⚙️</i>
+            <span>الإعدادات</span>
+          </a>
+        </li>
+        <li class="menu-item logout">
+          <a href="#">
+            <i class="icon">🚪</i>
+            <span>تسجيل الخروج</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+      <div class="mobile-profile">
+        <img src="https://via.placeholder.com/50" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-title">
+          <h1>لوحة التحكم</h1>
+          <p class="top-bar-subtitle">مرحباً بعودتك، المشرف. إليك ما يحدث مع BloodBridge.</p>
+        </div>
+        <div class="top-bar-actions">
+          <button class="notification-btn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">2</span>
+          </button>
+          <div class="profile-section">
+            <div class="profile-info">
+              <span class="profile-name">منظمة Unity Health</span>
+              <span class="profile-role">مؤسسة</span>
+            </div>
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-wrapper">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h2>قائمة انتظار التحقق من المنظمات</h2>
+          <p class="page-subtitle">مراجعة والتحقق من تسجيلات المنظمات الجديدة.</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+          <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="البحث عن المنظمات..."
+            />
+          </div>
+          <select class="filter-select" id="dateFilter">
+            <option value="">تصفية حسب نطاق التاريخ</option>
+            <option value="today">اليوم</option>
+            <option value="week">هذا الأسبوع</option>
+            <option value="month">هذا الشهر</option>
+            <option value="year">هذا العام</option>
+          </select>
+          <select class="filter-select" id="typeFilter">
+            <option value="">تصفية حسب نوع المنظمة</option>
+            <option value="blood-bank">بنك دم</option>
+            <option value="hospital">مستشفى</option>
+            <option value="non-profit">غير ربحية</option>
+            <option value="university">جامعة</option>
+          </select>
+        </div>
+
+        <!-- Verification Table Card -->
+        <div class="verification-card">
+          <!-- Table -->
+          <div class="table-container">
+            <table class="verification-table">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-content">
+                      <span>اسم المنظمة</span>
+                      <span class="sort-icon">⇅</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>نوع المنظمة</span>
+                      <span class="sort-icon">⇅</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>تاريخ التسجيل</span>
+                      <span class="sort-icon">⇅</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>رقم الترخيص</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>الحالة</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-content">
+                      <span>الإجراءات</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="verification-tbody">
+                <tr class="table-row">
+                  <td class="org-name-cell">مركز الدم بالمدينة</td>
+                  <td class="org-type-cell">بنك دم</td>
+                  <td class="date-cell">2023-08-15</td>
+                  <td class="license-cell">BB12345</td>
+                  <td class="status-cell">
+                    <span class="status-badge pending">قيد المراجعة</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-review" data-org="مركز الدم بالمدينة" data-type="بنك دم" data-date="2023-08-15" data-license="BB12345">
+                      مراجعة
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="org-name-cell">خدمات الدم بالمستشفى الإقليمي</td>
+                  <td class="org-type-cell">مستشفى</td>
+                  <td class="date-cell">2023-09-22</td>
+                  <td class="license-cell">HOSP6789</td>
+                  <td class="status-cell">
+                    <span class="status-badge pending">قيد المراجعة</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-review" data-org="خدمات الدم بالمستشفى الإقليمي" data-type="مستشفى" data-date="2023-09-22" data-license="HOSP6789">
+                      مراجعة
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="org-name-cell">مركز التبرع بالدم المجتمعي</td>
+                  <td class="org-type-cell">غير ربحية</td>
+                  <td class="date-cell">2023-10-10</td>
+                  <td class="license-cell">NP101112</td>
+                  <td class="status-cell">
+                    <span class="status-badge pending">قيد المراجعة</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-review" data-org="مركز التبرع بالدم المجتمعي" data-type="غير ربحية" data-date="2023-10-10" data-license="NP101112">
+                      مراجعة
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="org-name-cell">مركز الدم بنظام صحة الجامعة</td>
+                  <td class="org-type-cell">جامعة</td>
+                  <td class="date-cell">2023-11-05</td>
+                  <td class="license-cell">UNIV1314</td>
+                  <td class="status-cell">
+                    <span class="status-badge pending">قيد المراجعة</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-review" data-org="مركز الدم بنظام صحة الجامعة" data-type="جامعة" data-date="2023-11-05" data-license="UNIV1314">
+                      مراجعة
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <td class="org-name-cell">خدمات الدم بالمترو</td>
+                  <td class="org-type-cell">بنك دم</td>
+                  <td class="date-cell">2023-12-01</td>
+                  <td class="license-cell">BB151617</td>
+                  <td class="status-cell">
+                    <span class="status-badge pending">قيد المراجعة</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-review" data-org="خدمات الدم بالمترو" data-type="بنك دم" data-date="2023-12-01" data-license="BB151617">
+                      مراجعة
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination-container">
+            <div class="pagination-info">
+              عرض <span class="pagination-range">1-5</span> من <span class="pagination-total">10</span>
+            </div>
+            <div class="pagination-controls">
+              <button class="pagination-btn" id="prev-btn" disabled>→</button>
+              <button class="pagination-btn page-number active">1</button>
+              <button class="pagination-btn page-number">2</button>
+              <button class="pagination-btn page-number">3</button>
+              <span class="pagination-dots">...</span>
+              <button class="pagination-btn page-number">10</button>
+              <button class="pagination-btn" id="next-btn">←</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Review Modal -->
+    <div class="modal-overlay" id="review-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>مراجعة المنظمة</h2>
+          <button class="modal-close" id="close-modal">×</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Content will be dynamically inserted -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn-modal btn-approve" id="approve-btn">
+            <span>✓</span>
+            <span>الموافقة</span>
+          </button>
+          <button class="btn-modal btn-reject" id="reject-btn">
+            <span>✕</span>
+            <span>الرفض</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/admin-Orgaizatin-Varification-Queue.js"></script>
+  </body>
+</html>

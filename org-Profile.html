@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الملف الشخصي - BloodBridge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/org-Profile.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🩸</div>
+          <span>BloodBridge</span>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🏠</i>
+            <span>الرئيسية</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="#">
+            <i class="icon">👤</i>
+            <span>الملف الشخصي</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🕐</i>
+            <span>السجل</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📋</i>
+            <span>تتبع الطلبات</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">➕</i>
+            <span>إنشاء طلب</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📊</i>
+            <span>التقارير</span>
+          </a>
+        </li>
+        <li class="menu-item logout">
+          <a href="#">
+            <i class="icon">🚪</i>
+            <span>تسجيل الخروج</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+      <div class="mobile-profile">
+        <img src="https://via.placeholder.com/50" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-title">
+          <h1>الملف الشخصي</h1>
+          <p class="top-bar-subtitle">مرحباً بعودتك، منظمة Unity Health!</p>
+        </div>
+        <div class="top-bar-actions">
+          <button class="notification-btn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">2</span>
+          </button>
+          <div class="profile-section">
+            <div class="profile-info">
+              <span class="profile-name">منظمة Unity Health</span>
+              <span class="profile-role">مؤسسة</span>
+            </div>
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-wrapper">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h2>ملف المنظمة</h2>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="tabs-container">
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="organization">
+              <span class="tab-icon">🏢</span>
+              <span class="tab-label">تفاصيل المنظمة</span>
+            </button>
+            <button class="tab-btn" data-tab="contact">
+              <span class="tab-icon">📞</span>
+              <span class="tab-label">معلومات الاتصال</span>
+            </button>
+            <button class="tab-btn" data-tab="admin">
+              <span class="tab-icon">👨‍💼</span>
+              <span class="tab-label">جهة الاتصال الإدارية</span>
+            </button>
+            <button class="tab-btn" data-tab="description">
+              <span class="tab-icon">📝</span>
+              <span class="tab-label">الوصف الاختياري</span>
+            </button>
+          </div>
+
+          <!-- Tabs Content -->
+          <div class="tabs-content">
+            <!-- Tab 1: Organization Details -->
+            <div class="tab-pane active" id="organization-tab">
+              <form class="profile-form">
+                <div class="form-section">
+                  <h3 class="section-title">تفاصيل المنظمة</h3>
+
+                  <!-- Logo Upload -->
+                  <div class="logo-upload-section">
+                    <div class="logo-preview">
+                      <img
+                        src="https://via.placeholder.com/150"
+                        alt="Organization Logo"
+                        id="org-logo"
+                      />
+                    </div>
+                    <button type="button" class="btn-change-logo" id="change-logo-btn">
+                      تغيير الشعار
+                    </button>
+                  </div>
+
+                  <!-- Organization Name -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="org-name"
+                        >اسم المنظمة</label
+                      >
+                      <input
+                        type="text"
+                        id="org-name"
+                        class="form-input"
+                        value="LifeSavers Foundation"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Organization Type -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="org-type"
+                        >نوع المنظمة</label
+                      >
+                      <select id="org-type" class="form-select">
+                        <option value="non-profit" selected>غير ربحية</option>
+                        <option value="hospital">مستشفى</option>
+                        <option value="blood-bank">بنك دم</option>
+                        <option value="university">جامعة</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- License Number -->
+                  <div class="form-row two-cols">
+                    <div class="form-group">
+                      <label class="form-label" for="license-number"
+                        >رقم الترخيص/التسجيل</label
+                      >
+                      <div class="input-with-icon" style="position: relative;">
+                        <input
+                          type="text"
+                          id="license-number"
+                          class="form-input"
+                          value="LN-123456789"
+                        />
+                        <button type="button" class="icon-btn edit-btn" style="position: absolute; left: 2%;">
+                          <span>✏️</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- License Document -->
+                    <div class="form-group">
+                      <label class="form-label">وثيقة الترخيص</label>
+                      <div class="file-upload-group">
+                        <span class="file-name">license_document_final.pdf</span>
+                        <button type="button" class="btn-file-action" id="btn-file-action">
+                          عرض
+                        </button>
+                        <button type="button" class="btn-file-action secondary" id="btn-file-action secondary">
+                          إعادة الرفع
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab 2: Contact Information -->
+            <div class="tab-pane" id="contact-tab">
+              <form class="profile-form">
+                <div class="form-section">
+                  <h3 class="section-title">معلومات الاتصال</h3>
+
+                  <!-- Main Phone & Email -->
+                  <div class="form-row two-cols">
+                    <div class="form-group">
+                      <label class="form-label" for="main-phone"
+                        >الهاتف الرئيسي</label
+                      >
+                      <input
+                        type="tel"
+                        id="main-phone"
+                        class="form-input"
+                        value="+1 (555) 123-4567"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="main-email"
+                        >البريد الإلكتروني الرئيسي</label
+                      >
+                      <input
+                        type="email"
+                        id="main-email"
+                        class="form-input"
+                        value="contact@lifesavers.org"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Website -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="website"
+                        >الموقع الإلكتروني <span class="optional">(اختياري)</span></label
+                      >
+                      <input
+                        type="url"
+                        id="website"
+                        class="form-input"
+                        value="https://lifesavers.org"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Physical Address -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="physical-address"
+                        >العنوان الفعلي</label
+                      >
+                      <textarea
+                        id="physical-address"
+                        class="form-textarea"
+                        rows="3"
+                      >123 Health Ave, Wellness City, ST 12345</textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab 3: Administrative Contact -->
+            <div class="tab-pane" id="admin-tab">
+              <form class="profile-form">
+                <div class="form-section">
+                  <h3 class="section-title">جهة الاتصال الإدارية</h3>
+
+                  <!-- Admin Name & Email -->
+                  <div class="form-row two-cols">
+                    <div class="form-group">
+                      <label class="form-label" for="admin-name"
+                        >اسم المسؤول</label
+                      >
+                      <input
+                        type="text"
+                        id="admin-name"
+                        class="form-input"
+                        value="Jane Doe"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="admin-email"
+                        >البريد الإلكتروني للمسؤول</label
+                      >
+                      <input
+                        type="email"
+                        id="admin-email"
+                        class="form-input"
+                        value="jane.doe@lifesavers.org"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Admin Phone -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="admin-phone"
+                        >هاتف المسؤول <span class="optional">(اختياري)</span></label
+                      >
+                      <input
+                        type="tel"
+                        id="admin-phone"
+                        class="form-input"
+                        value="+1 (555) 987-6543"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab 4: Optional Description -->
+            <div class="tab-pane" id="description-tab">
+              <form class="profile-form">
+                <div class="form-section">
+                  <h3 class="section-title">الوصف الاختياري</h3>
+
+                  <!-- Organization Mission -->
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="org-mission"
+                        >مهمة المنظمة</label
+                      >
+                      <textarea
+                        id="org-mission"
+                        class="form-textarea"
+                        rows="5"
+                        placeholder="اكتب مهمة منظمتك هنا..."
+                      >Our mission is to bridge the gap between blood donors and those in need, ensuring a safe and steady supply of blood for all medical emergencies.</textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="form-footer">
+            <button type="button" class="btn-cancel" id="cancel-btn">
+              إلغاء
+            </button>
+            <button type="button" class="btn-update" id="update-btn">
+              تحديث الملف الشخصي
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/org-Profile.js"></script>
+  </body>
+</html>

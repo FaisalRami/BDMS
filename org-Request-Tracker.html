@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تتبع الطلبات - المؤسسة</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/org-Request-Tracker.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🩸</div>
+          <span>BloodBridge</span>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🏠</i>
+            <span>الرئيسية</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">👤</i>
+            <span>الملف الشخصي</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">🕐</i>
+            <span>السجل</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="track-requests.html">
+            <i class="icon">📋</i>
+            <span>تتبع الطلبات</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">➕</i>
+            <span>إنشاء طلب</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#">
+            <i class="icon">📊</i>
+            <span>التقارير</span>
+          </a>
+        </li>
+        <li class="menu-item logout">
+          <a href="#">
+            <i class="icon">🚪</i>
+            <span>تسجيل الخروج</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <div class="logo">
+        <div class="logo-icon">🩸</div>
+        <span>BloodBridge</span>
+      </div>
+      <div class="mobile-profile">
+        <img src="https://via.placeholder.com/50" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-title">
+          <h1>تتبع الطلبات</h1>
+          <p class="top-bar-subtitle">مرحباً بعودتك، منظمة Unity Health!</p>
+        </div>
+        <div class="top-bar-actions">
+          <button class="notification-btn">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">2</span>
+          </button>
+          <div class="profile-section">
+            <div class="profile-info">
+              <span class="profile-name">منظمة Unity Health</span>
+              <span class="profile-role">مؤسسة</span>
+            </div>
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="content-wrapper">
+        <!-- Tracker Card -->
+        <div class="tracker-card">
+          <div class="tracker-header">
+            <div class="tracker-title-section">
+              <h2>متتبع الطلبات</h2>
+              <p class="tracker-subtitle">راقب وأدر طلبات التبرع بالدم الخاصة بك.</p>
+            </div>
+          </div>
+
+          <!-- Search and Filters -->
+          <div class="search-filters-section">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="البحث برقم الطلب أو العنوان"
+                class="search-input"
+              />
+            </div>
+            <div class="filters-group">
+              <select class="filter-select" id="status-filter">
+                <option value="all">الحالة</option>
+                <option value="waiting">قيد الانتظار</option>
+                <option value="accepted">مقبول من المتبرع</option>
+                <option value="confirmed">مؤكد في الموقع</option>
+                <option value="completed">مكتمل</option>
+                <option value="cancelled">ملغي</option>
+                <option value="expired">منتهي</option>
+              </select>
+              <select class="filter-select" id="blood-type-filter">
+                <option value="all">فصيلة الدم</option>
+                <option value="O-">O-</option>
+                <option value="O+">O+</option>
+                <option value="A-">A-</option>
+                <option value="A+">A+</option>
+                <option value="B-">B-</option>
+                <option value="B+">B+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+              </select>
+              <select class="filter-select" id="date-filter">
+                <option value="all">نطاق التاريخ</option>
+                <option value="today">اليوم</option>
+                <option value="week">هذا الأسبوع</option>
+                <option value="month">هذا الشهر</option>
+                <option value="custom">مخصص</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Requests Table -->
+          <div class="table-container">
+            <table class="requests-table" id="blood-table">
+              <thead>
+                <tr>
+                  <th class="row-number">#</th>
+                  <th>رقم الطلب/العنوان</th>
+                  <th>فصيلة الدم</th>
+                  <th>الوحدات</th>
+                  <th>تاريخ الإنشاء</th>
+                  <th>الموعد النهائي</th>
+                  <th>الحالة</th>
+                  <th>الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="requests-tbody">
+                <tr class="table-row" data-status="waiting" data-blood="O-" data-date="2023-11-15">
+                  <td>1</td>
+                  <td class="request-cell">
+                    <div class="request-wrapper">
+                      <span class="request-id">#12345:</span>
+                      <span class="request-title">حالة طارئة O-</span>
+                    </div>
+                  </td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge blood-o-negative">O-</span>
+                  </td>
+                  <td class="units-cell">5</td>
+                  <td class="date-cell">2023-11-15</td>
+                  <td class="deadline-cell">2023-11-18</td>
+                  <td class="status-cell">
+                    <span class="status-badge status-waiting">قيد الانتظار</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-view" data-id="12345">عرض التفاصيل</button>
+                    <!-- <button class="btn-cancel-icon" data-id="12345" title="إلغاء">⊗</button> -->
+                     <div class="action-buttons-container">
+  <button class="dropdown-toggle" aria-label="خيارات">
+    <span class="arrow-down">▼</span>
+    <span class="arrow-up">▲</span>
+  </button>
+  
+  <div class="buttons-dropdown">
+    <!-- <button class="btn-qr-icon" data-id="67890" title="رمز QR">⊞</button> -->
+    <button class="btn-cancel-icon" data-id="67890" title="إلغاء">⊗</button>
+  </div>
+</div>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="accepted" data-blood="A+" data-date="2023-11-10">
+                  <td>2</td>
+                  <td class="request-cell">
+                    <div class="request-wrapper">
+                      <span class="request-id">#67890:</span>
+                      <span class="request-title">جراحة A+</span>
+                    </div>
+                  </td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge blood-a-positive">A+</span>
+                  </td>
+                  <td class="units-cell">3</td>
+                  <td class="date-cell">2023-11-10</td>
+                  <td class="deadline-cell">2023-11-12</td>
+                  <td class="status-cell">
+                    <span class="status-badge status-accepted">مقبول من المتبرع</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-view" data-id="67890">عرض التفاصيل</button>
+                    <!-- <button class="btn-qr-icon" data-id="67890" title="رمز QR">⊞</button>
+                    <button class="btn-cancel-icon" data-id="67890" title="إلغاء">⊗</button> -->
+                    <div class="action-buttons-container">
+  <button class="dropdown-toggle" aria-label="خيارات">
+    <span class="arrow-down">▼</span>
+    <span class="arrow-up">▲</span>
+  </button>
+  
+  <div class="buttons-dropdown">
+    <button class="btn-qr-icon" data-id="67890" title="رمز QR">⊞</button>
+    <button class="btn-cancel-icon" data-id="67890" title="إلغاء">⊗</button>
+  </div>
+</div>
+
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="confirmed" data-blood="B-" data-date="2023-11-05">
+                  <td>3</td>
+                  <td class="request-cell">
+                    <div class="request-wrapper">
+                      <span class="request-id">#24680:</span>
+                      <span class="request-title">إمداد B-</span>
+                    </div>
+                  </td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge blood-b-negative">B-</span>
+                  </td>
+                  <td class="units-cell">2</td>
+                  <td class="date-cell">2023-11-05</td>
+                  <td class="deadline-cell">2023-11-08</td>
+                  <td class="status-cell">
+                    <span class="status-badge status-confirmed">مؤكد في الموقع</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-view" data-id="24680">عرض التفاصيل</button>
+                    <!-- <button class="btn-qr-icon" data-id="24680" title="رمز QR">⊞</button>
+                    <button class="btn-cancel-icon" data-id="24680" title="إلغاء">⊗</button> -->
+                    <div class="action-buttons-container">
+  <button class="dropdown-toggle" aria-label="خيارات">
+    <span class="arrow-down">▼</span>
+    <span class="arrow-up">▲</span>
+  </button>
+  
+  <div class="buttons-dropdown">
+    <button class="btn-qr-icon" data-id="67890" title="رمز QR">⊞</button>
+    <button class="btn-cancel-icon" data-id="67890" title="إلغاء">⊗</button>
+  </div>
+</div>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="completed" data-blood="AB+" data-date="2023-10-30">
+                  <td>4</td>
+                  <td class="request-cell">
+                    <div class="request-wrapper">
+                      <span class="request-id">#13579:</span>
+                      <span class="request-title">أطفال AB+</span>
+                    </div>
+                  </td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge blood-ab-positive">AB+</span>
+                  </td>
+                  <td class="units-cell">1</td>
+                  <td class="date-cell">2023-10-30</td>
+                  <td class="deadline-cell">2023-11-02</td>
+                  <td class="status-cell">
+                    <span class="status-badge status-completed">مكتمل</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-view" data-id="13579">عرض التفاصيل</button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="cancelled" data-blood="O+" data-date="2023-10-25">
+                  <td>5</td>
+                  <td class="request-cell">
+                    <div class="request-wrapper">
+                      <span class="request-id">#97531:</span>
+                      <span class="request-title">بحث O+</span>
+                    </div>
+                  </td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge blood-o-positive">O+</span>
+                  </td>
+                  <td class="units-cell">4</td>
+                  <td class="date-cell">2023-10-25</td>
+                  <td class="deadline-cell">2023-10-28</td>
+                  <td class="status-cell">
+                    <span class="status-badge status-cancelled">ملغي</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-view" data-id="97531">عرض التفاصيل</button>
+                  </td>
+                </tr>
+
+                <tr class="table-row" data-status="expired" data-blood="AB-" data-date="2023-10-20">
+                  <td>6</td>
+                  <td class="request-cell">
+                    <div class="request-wrapper">
+                      <span class="request-id">#55555:</span>
+                      <span class="request-title">عاجل AB-</span>
+                    </div>
+                  </td>
+                  <td class="blood-type-cell">
+                    <span class="blood-badge blood-ab-negative">AB-</span>
+                  </td>
+                  <td class="units-cell">2</td>
+                  <td class="date-cell">2023-10-20</td>
+                  <td class="deadline-cell">2023-10-21</td>
+                  <td class="status-cell">
+                    <span class="status-badge status-expired">منتهي</span>
+                  </td>
+                  <td class="action-cell">
+                    <button class="btn-view" data-id="55555">عرض التفاصيل</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="pagination" id="pagination"></div>
+          
+
+          <!-- Empty State -->
+          <div class="empty-state hidden" id="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>لا توجد نتائج</h3>
+            <p>لم يتم العثور على طلبات تطابق المعايير المحددة</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Detail Modal -->
+    <div class="modal-overlay" id="detail-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>تفاصيل الطلب</h2>
+          <button class="modal-close" id="close-detail-modal">×</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Content will be dynamically inserted -->
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div class="modal-overlay" id="qr-modal">
+      <div class="modal-content modal-qr">
+        <div class="modal-header">
+          <h2>رمز QR للطلب</h2>
+          <button class="modal-close" id="close-qr-modal">×</button>
+        </div>
+        <div class="modal-body qr-body">
+          <div class="qr-code-container" id="qr-code">
+            <div class="qr-placeholder" >
+              <div class="qr-grid">  
+                <svg
+                      viewBox="0 0 100 100"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="100" height="100" fill="white" />
+                      <rect x="10" y="10" width="10" height="10" fill="black" />
+                      <rect x="20" y="10" width="10" height="10" fill="black" />
+                      <rect x="40" y="10" width="10" height="10" fill="black" />
+                      <rect x="70" y="10" width="10" height="10" fill="black" />
+                      <rect x="80" y="10" width="10" height="10" fill="black" />
+                      <rect x="10" y="20" width="10" height="10" fill="black" />
+                      <rect x="40" y="20" width="10" height="10" fill="black" />
+                      <rect x="60" y="20" width="10" height="10" fill="black" />
+                      <rect x="80" y="20" width="10" height="10" fill="black" />
+                      <rect x="10" y="40" width="10" height="10" fill="black" />
+                      <rect x="30" y="40" width="10" height="10" fill="black" />
+                      <rect x="50" y="40" width="10" height="10" fill="black" />
+                      <rect x="80" y="40" width="10" height="10" fill="black" />
+                      <rect x="20" y="60" width="10" height="10" fill="black" />
+                      <rect x="40" y="60" width="10" height="10" fill="black" />
+                      <rect x="70" y="60" width="10" height="10" fill="black" />
+                      <rect x="10" y="70" width="10" height="10" fill="black" />
+                      <rect x="20" y="70" width="10" height="10" fill="black" />
+                      <rect x="60" y="70" width="10" height="10" fill="black" />
+                      <rect x="80" y="70" width="10" height="10" fill="black" />
+                      <rect x="10" y="80" width="10" height="10" fill="black" />
+                      <rect x="40" y="80" width="10" height="10" fill="black" />
+                      <rect x="70" y="80" width="10" height="10" fill="black" />
+                      <rect x="80" y="80" width="10" height="10" fill="black" />
+                    </svg></div>
+            </div>
+          </div>
+          <p class="qr-instructions">اعرض هذا الرمز للمتبرع عند الوصول</p>
+          <button class="btn-download-qr" id="download-qr">
+            <span>📥</span>
+            <span>تحميل رمز QR</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/org-Request-Tracker.js"></script>
+  </body>
+</html>
